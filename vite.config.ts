@@ -24,12 +24,22 @@ export default defineConfig(({ mode }) => {
         }
       : true;
 
+  const srcPath = resolve(__dirname, './src');
+
   return {
     plugins: [react()],
     server: {
       host,
       port,
       https,
+    },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `@import 'reset'; @import 'common.scss';`,
+          includePaths: [`${srcPath}/utilities`],
+        },
+      },
     },
   };
 });
