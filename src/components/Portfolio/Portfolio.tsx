@@ -1,4 +1,5 @@
 import { Button } from '../Button/Button';
+import { Card } from '../Card/Card';
 import { Contact } from '../Contact/Contact';
 import { Main } from '../Main/Main';
 import { Photo } from '../Photo/Photo';
@@ -30,7 +31,9 @@ const Portfolio = ({}: Props) => {
         <Button onClick={() => 'TODO:'}>Training</Button>
         <Button onClick={() => 'TODO:'}>Personal projects</Button>
       </Sidebar>
-      <Main />
+      <Main>
+        <Card />
+      </Main>
     </div>
   );
 };
