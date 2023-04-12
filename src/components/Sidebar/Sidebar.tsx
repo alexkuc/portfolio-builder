@@ -1,9 +1,11 @@
 import './sidebar.scss';
 
 type Props = {
+  children: React.ReactNode | React.ReactNode[];
+};
 
-  return <div className="sidebar">sidebar</div>;
 const Sidebar = ({ children }: Props) => {
+  return <div className="sidebar">{children}</div>;
 };
 
 export { Sidebar };
