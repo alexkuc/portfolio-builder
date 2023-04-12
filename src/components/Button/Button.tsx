@@ -5,7 +5,7 @@ type Button = JSX.IntrinsicElements['button'];
 
 type Props = {
   onClick: Button['onClick'];
-  children: React.ReactNode;
+  children: Button['children'];
 } & Button;
 
 const Button = ({ children, className, ...props }: Props) => {
