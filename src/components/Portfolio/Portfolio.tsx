@@ -2,9 +2,9 @@ import { Main } from '../Main/Main';
 import { Sidebar } from '../Sidebar/Sidebar';
 import './portfolio.scss';
 
-type Params = {};
+type Props = {};
 
-const Portfolio = ({}: Params) => {
+const Portfolio = ({}: Props) => {
   return (
     <div className="portfolio">
       <Sidebar />

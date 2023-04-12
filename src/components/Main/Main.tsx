@@ -1,8 +1,8 @@
 import './main.scss';
 
-type Params = {};
+type Props = {};
 
-const Main = ({}: Params) => {
+const Main = ({}: Props) => {
   return <div className="main">main body</div>;
 };
 

@@ -1,9 +1,9 @@
 import './sidebar.scss';
 
-type Params = {};
+type Props = {
 
-const Sidebar = ({}: Params) => {
   return <div className="sidebar">sidebar</div>;
+const Sidebar = ({ children }: Props) => {
 };
 
 export { Sidebar };
