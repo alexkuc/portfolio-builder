@@ -1,9 +1,22 @@
+import classNames from 'classnames';
 import './main.scss';
 
-type Props = {};
+type Div = JSX.IntrinsicElements['div'];
 
-const Main = ({}: Props) => {
-  return <div className="main">main body</div>;
+type Props = {
+  children: Div['children'];
+} & Div;
+
+const Main = ({ children, className, ...props }: Props) => {
+  const css = classNames({
+    main: true,
+    [`${className}`]: className,
+  });
+  return (
+    <div className={css} {...props}>
+      {children}
+    </div>
+  );
 };
 
 export { Main };
