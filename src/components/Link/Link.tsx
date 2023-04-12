@@ -5,7 +5,7 @@ type A = JSX.IntrinsicElements['a'];
 
 type Props = {
   href: A['href'];
-  children: React.ReactNode;
+  children: A['children'];
 } & A;
 
 const Link = ({ className, children, ...props }: Props) => {
