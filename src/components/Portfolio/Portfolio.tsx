@@ -1,4 +1,5 @@
-import { Card } from '../Card/Card';
+import { v4 } from 'uuid';
+import { Job } from '../Job/Job';
 import { Link } from '../Link/Link';
 import { Photo } from '../Photo/Photo';
 import { Schemas, Types } from '../Schemas';
@@ -36,7 +37,14 @@ const Portfolio = (props: Types['Portfolio']) => {
         {personal.length > 0 && <Link href="#personal">Personal projects</Link>}
       </div>
       <div className="portfolio__content">
-        <Card />
+        {jobs.length > 0 && (
+          <>
+            <h2 className="portfolio__subtitle">Work Experience</h2>
+            {jobs.map((j) => (
+              <Job key={v4()} {...j} />
+            ))}
+          </>
+        )}
       </div>
     </div>
   );
