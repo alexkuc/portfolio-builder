@@ -8,15 +8,18 @@
   cursor: pointer;
 }
 
-.card__title {
-  font-size: 1rem;
+// css triangle: https://stackoverflow.com/a/7091927
+.card__header::after {
+  content: '';
+  border: 0.4rem solid transparent;
 }
 
-.card__body {
+.card__header--closed::after {
+  margin-block-start: 0.4rem;
+  border-block-start-color: gray;
 }
 
-.card__list {
-}
-
-.card__point {
+.card__header--open::after {
+  margin-block-end: 0.4rem;
+  border-block-end-color: gray;
 }

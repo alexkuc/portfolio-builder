@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import { useState } from 'react';
 import './card.scss';
 
@@ -18,10 +19,16 @@ const Card = ({ iStatus, header, children }: Props) => {
     if (status === 'open') setStatus('closed');
   };
 
+  const headerCss = classNames({
+    card__header: true,
+    'card__header--open': status === 'open',
+    'card__header--closed': status === 'closed',
+  });
+
   return (
     <div className="card">
       {header && (
-        <div onClick={toggle} className="card__header">
+        <div onClick={toggle} className={headerCss}>
           {header}
         </div>
       )}
