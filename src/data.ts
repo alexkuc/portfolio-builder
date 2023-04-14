@@ -552,7 +552,14 @@ const data: Types['Portfolio'] = {
       ],
     },
   ],
-  education: [],
+  education: [
+    {
+      institution: 'Name of University',
+      qualiftication: 'Name of degree',
+      start: DateTime.fromFormat('15.01.20', 'dd.MM.yy'),
+      end: DateTime.fromFormat('15.06.20', 'dd.MM.yy'),
+    },
+  ],
   training: [],
   personal: [],
 };
