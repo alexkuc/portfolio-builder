@@ -2,6 +2,7 @@ import { v4 } from 'uuid';
 import { Card } from '../Card/Card';
 import { Header } from '../Header/Header';
 import { Link } from '../Link/Link';
+import { Paragraph } from '../Paragraph/Paragraph';
 import { Schemas, Types } from '../Schemas';
 import './project.scss';
 
@@ -12,7 +13,7 @@ const Project = (props: Types['Project']) => {
 
   const children = (
     <>
-      <p className="project__summary">{summary}</p>
+      <Paragraph>{summary}</Paragraph>
       {points.length > 0 && (
         <ul className="project__points">
           {points.map((p) => (
