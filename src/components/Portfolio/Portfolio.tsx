@@ -30,14 +30,7 @@ const Portfolio = (props: Types['Portfolio']) => {
           </div>
         )}
         <Separator />
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          pharetra dignissim enim. Mauris mattis molestie nunc eu posuere. Donec
-          hendrerit quis turpis sit amet varius. Sed euismod mi velit, ut
-          condimentum lorem venenatis vitae. Nulla euismod pellentesque mauris
-          id maximus. In dignissim, diam et dignissim faucibus, neque ante
-          venenatis arcu.
-        </Text>
+        <Text>{intro}</Text>
         <Separator />
         <Button onClick={() => 'TODO:'}>Work experience</Button>
         <Button onClick={() => 'TODO:'}>Education</Button>
