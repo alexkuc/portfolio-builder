@@ -4,6 +4,7 @@ import { Link } from '../Link/Link';
 import { Photo } from '../Photo/Photo';
 import { Schemas, Types } from '../Schemas';
 import { Separator } from '../Separator/Separator';
+import { Study } from '../Study/Study';
 import { Text } from '../Text/Text';
 import './portfolio.scss';
 
@@ -43,6 +44,16 @@ const Portfolio = (props: Types['Portfolio']) => {
             <Cards>
               {jobs.map((j) => (
                 <Job key={v4()} {...j} />
+              ))}
+            </Cards>
+          </>
+        )}
+        {education.length > 0 && (
+          <>
+            <Header>Education</Header>
+            <Cards>
+              {education.map((e) => (
+                <Study key={v4()} {...e} />
               ))}
             </Cards>
           </>
