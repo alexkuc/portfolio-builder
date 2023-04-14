@@ -1,4 +1,13 @@
 .separator {
   width: 100%;
   margin-block: 1rem;
+  border: none;
+}
+
+.separator--solid {
+  border-block-end: 1px inset gray;
+}
+
+.separator--dashed {
+  border-block-end: 1px dashed gray;
 }
