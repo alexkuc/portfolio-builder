@@ -9,10 +9,13 @@ const Job = (props: Types['Job']) => {
     Schemas.Job.parse(props);
 
   const header = (
-    <div className="job__header">
-      {position}
-      {company}
-      {start.toFormat('LLL')}-{end ? end.toFormat('LLL') : 'current'}
+    <div className="job__header-container">
+      <p className="job__header">{position}</p>
+      <p className="job__header">{company}</p>
+      <p className="job__header">
+        {start.toFormat('LLL yyyy')} -{' '}
+        {end ? end.toFormat('LLL yyyy') : 'current'}
+      </p>
     </div>
   );
 
