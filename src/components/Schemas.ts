@@ -37,8 +37,16 @@ const Course = z.object({
   links: Link.array(),
 });
 
-const Portfolio = z.object({
+const Info = z.object({
   name: z.string(),
+  intro: z.string(),
+  linkedin: z.string().url().optional(),
+  email: z.string().email().optional(),
+  phone: z.string().optional(),
+});
+
+const Portfolio = z.object({
+  info: Info,
   jobs: Job.array(),
   education: Study.array(),
   training: Course.array(),
@@ -46,6 +54,7 @@ const Portfolio = z.object({
 });
 
 export const Schemas = {
+  Info,
   Link,
   Project,
   Job,
@@ -55,6 +64,7 @@ export const Schemas = {
 };
 
 export type Types = {
+  Info: z.infer<typeof Info>;
   Link: z.infer<typeof Link>;
   Project: z.infer<typeof Project>;
   Job: z.infer<typeof Job>;
