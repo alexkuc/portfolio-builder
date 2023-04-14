@@ -19,18 +19,22 @@ const Job = (props: Types['Job']) => {
     </div>
   );
 
+  const content = (
+    <>
+      <p className="job__summary">{summary}</p>
+      {projects.length > 0 && (
+        <div className="job__projects">
+          {projects.map((p) => (
+            <Project key={v4()} {...p} />
+          ))}
+        </div>
+      )}
+    </>
+  );
+
   return (
     <div className="job">
-      <Card header={header}>
-        <p className="job__summary">{summary}</p>
-        {projects.length > 0 && (
-          <div className="job__projects">
-            {projects.map((p) => (
-              <Project key={v4()} {...p} />
-            ))}
-          </div>
-        )}
-      </Card>
+      <Card header={header}>{content}</Card>
     </div>
   );
 };
