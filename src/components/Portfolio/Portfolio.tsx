@@ -1,4 +1,3 @@
-import { Button } from '../Button/Button';
 import { Card } from '../Card/Card';
 import { Link } from '../Link/Link';
 import { Main } from '../Main/Main';
@@ -32,10 +31,10 @@ const Portfolio = (props: Types['Portfolio']) => {
         <Separator />
         <Text>{intro}</Text>
         <Separator />
-        <Button onClick={() => 'TODO:'}>Work experience</Button>
-        <Button onClick={() => 'TODO:'}>Education</Button>
-        <Button onClick={() => 'TODO:'}>Training</Button>
-        <Button onClick={() => 'TODO:'}>Personal projects</Button>
+        {jobs.length > 0 && <Link href="#work">Work experience</Link>}
+        {education.length > 0 && <Link href="#education">Education</Link>}
+        {training.length > 0 && <Link href="#training">Training</Link>}
+        {personal.length > 0 && <Link href="#personal">Personal projects</Link>}
       </div>
       <Main>
         <Card />
