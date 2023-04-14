@@ -1,0 +1,20 @@
+.job {
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+.job__header-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.job__header {
+  font-size: 1rem;
+}
+
+.job__summary {
+}
+
+.job__projects {
+}
