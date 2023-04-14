@@ -1,3 +1,4 @@
+import React from 'react';
 import { v4 } from 'uuid';
 import { Card } from '../Card/Card';
 import { Header } from '../Header/Header';
@@ -19,9 +20,7 @@ const Project = (props: Types['Project']) => {
       {points.length > 0 && (
         <ul className="project__points">
           {points.map((p) => (
-            <li key={v4()} className="project__point">
-              {p}
-            </li>
+            <Point key={v4()}>{p}</Point>
           ))}
         </ul>
       )}
@@ -41,6 +40,15 @@ const Project = (props: Types['Project']) => {
     <div className="project">
       <Card header={header}>{children}</Card>
     </div>
+  );
+};
+
+const Point = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <li className="point">
+      <span className="point__marker" />
+      <span className="point__content">{children}</span>
+    </li>
   );
 };
 

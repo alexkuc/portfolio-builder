@@ -1,0 +1,19 @@
+.point {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.point__marker {
+  margin-inline-end: 0.5rem;
+}
+
+.point__marker::after {
+  display: inline-block;
+  content: '*';
+  font-size: 1.25rem;
+}
+
+.point__content {
+  font-size: 1rem;
+}
