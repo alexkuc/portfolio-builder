@@ -9,6 +9,8 @@ type Status = 'open' | 'closed';
 type Props = {
   /** initial status */
   iStatus?: Status | undefined;
+  header?: React.ReactNode;
+  children: React.ReactNode | React.ReactNode[];
 };
 
 const Card = ({ iStatus, ...props }: Props) => {
