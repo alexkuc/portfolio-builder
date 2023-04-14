@@ -39,17 +39,25 @@ const Portfolio = (props: Types['Portfolio']) => {
       <div className="portfolio__content">
         {jobs.length > 0 && (
           <>
-            <h2 className="portfolio__header">Work Experience</h2>
-            <div className="portfolio__jobs">
+            <Header>Work Experience</Header>
+            <Cards>
               {jobs.map((j) => (
                 <Job key={v4()} {...j} />
               ))}
-            </div>
+            </Cards>
           </>
         )}
       </div>
     </div>
   );
+};
+
+const Header = ({ children }: { children: React.ReactNode }) => {
+  return <h2 className="portfolio__header">{children}</h2>;
+};
+
+const Cards = ({ children }: { children: React.ReactNode[] }) => {
+  return <h2 className="portfolio__cards">{children}</h2>;
 };
 
 export { Portfolio };
