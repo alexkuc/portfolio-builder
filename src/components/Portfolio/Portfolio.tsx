@@ -1,6 +1,5 @@
 import { Button } from '../Button/Button';
 import { Card } from '../Card/Card';
-import { Contact } from '../Contact/Contact';
 import { Main } from '../Main/Main';
 import { Photo } from '../Photo/Photo';
 import { Separator } from '../Separator/Separator';
@@ -15,7 +14,6 @@ const Portfolio = ({}: Props) => {
     <div className="portfolio">
       <Sidebar>
         <Photo />
-        <Contact />
         <Separator />
         <Text>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
