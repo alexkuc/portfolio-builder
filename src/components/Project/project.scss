@@ -1,3 +1,9 @@
+.project__points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .point {
   display: flex;
   justify-content: center;
