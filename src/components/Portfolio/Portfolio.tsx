@@ -1,5 +1,6 @@
 import { Button } from '../Button/Button';
 import { Card } from '../Card/Card';
+import { Link } from '../Link/Link';
 import { Main } from '../Main/Main';
 import { Photo } from '../Photo/Photo';
 import { Schemas, Types } from '../Schemas';
@@ -21,6 +22,13 @@ const Portfolio = (props: Types['Portfolio']) => {
       <h1 className="portfolio__title">{name}</h1>
       <div className="portfolio__sidebar">
         <Photo />
+        {(linkedin || email || phone) && (
+          <div className="portfolio__contacts">
+            {linkedin && <Link href={linkedin}>LinkedIn</Link>}
+            {email && <Link href={`mailto:${email}`}>Email</Link>}
+            {phone && <Link href={`tel:${phone}`}>Phone</Link>}
+          </div>
+        )}
         <Separator />
         <Text>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
