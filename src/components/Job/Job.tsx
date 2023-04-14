@@ -2,6 +2,7 @@ import { v4 } from 'uuid';
 import { Card } from '../Card/Card';
 import { Project } from '../Project/Project';
 import { Schemas, Types } from '../Schemas';
+import { Separator } from '../Separator/Separator';
 import './job.scss';
 
 const Job = (props: Types['Job']) => {
@@ -21,6 +22,7 @@ const Job = (props: Types['Job']) => {
 
   const content = (
     <>
+      <Separator />
       <p className="job__summary">{summary}</p>
       {projects.length > 0 && (
         <div className="job__projects">
