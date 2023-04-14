@@ -24,10 +24,11 @@ const Project = (props: Types['Project']) => {
           ))}
         </ul>
       )}
+      <Separator type="dashed" />
       {links.length > 0 && (
         <div className="project__links">
           {links.map((l) => (
-            <Link key={v4()} href={l.url}>
+            <Link key={v4()} className="project__link" href={l.url}>
               {l.name}
             </Link>
           ))}
