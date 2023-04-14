@@ -1,5 +1,6 @@
 import { v4 } from 'uuid';
 import { Card } from '../Card/Card';
+import { Header } from '../Header/Header';
 import { Link } from '../Link/Link';
 import { Schemas, Types } from '../Schemas';
 import './project.scss';
@@ -7,7 +8,7 @@ import './project.scss';
 const Project = (props: Types['Project']) => {
   const { name, summary, points, links } = Schemas.Project.parse(props);
 
-  const header = <p className="project__title">{name}</p>;
+  const header = <Header>{name}</Header>;
 
   const children = (
     <>
