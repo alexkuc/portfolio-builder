@@ -38,8 +38,7 @@ const Course = z.object({
 });
 
 const Portfolio = z.object({
-  firstName: z.string(),
-  lastName: z.string(),
+  name: z.string(),
   jobs: Job.array(),
   education: Study.array(),
   training: Course.array(),
