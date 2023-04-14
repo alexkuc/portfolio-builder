@@ -14,7 +14,7 @@ const Link = ({ className, children, ...props }: Props) => {
     [`${className}`]: !!className,
   });
   return (
-    <a className={css} {...props}>
+    <a className={css} target="_blank" {...props}>
       {children}
     </a>
   );
