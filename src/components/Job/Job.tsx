@@ -1,3 +1,4 @@
+import React from 'react';
 import { v4 } from 'uuid';
 import { Card } from '../Card/Card';
 import { Project } from '../Project/Project';
@@ -25,11 +26,17 @@ const Job = (props: Types['Job']) => {
       <Separator />
       <p className="job__summary">{summary}</p>
       {projects.length > 0 && (
-        <div className="job__projects">
-          {projects.map((p) => (
-            <Project key={v4()} {...p} />
-          ))}
-        </div>
+        <>
+          <Separator />
+          <div className="job__projects">
+            {projects.map((p, i) => (
+              <React.Fragment key={v4()}>
+                <Project {...p} />
+                {i !== projects.length - 1 && <Separator />}
+              </React.Fragment>
+            ))}
+          </div>
+        </>
       )}
     </>
   );
