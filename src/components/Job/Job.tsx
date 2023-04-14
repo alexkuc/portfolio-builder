@@ -1,3 +1,4 @@
+import { v4 } from 'uuid';
 import { Card } from '../Card/Card';
 import { Project } from '../Project/Project';
 import { Schemas, Types } from '../Schemas';
@@ -22,7 +23,7 @@ const Job = (props: Types['Job']) => {
         {projects.length > 0 && (
           <div className="job__projects">
             {projects.map((p) => (
-              <Project {...p} />
+              <Project key={v4()} {...p} />
             ))}
           </div>
         )}

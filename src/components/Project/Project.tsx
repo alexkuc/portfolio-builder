@@ -1,3 +1,4 @@
+import { v4 } from 'uuid';
 import { Card } from '../Card/Card';
 import { Link } from '../Link/Link';
 import { Schemas, Types } from '../Schemas';
@@ -21,7 +22,9 @@ const Project = (props: Types['Project']) => {
         {points.length > 0 && (
           <ul className="project__points">
             {points.map((p) => (
-              <li className="project__point">{p}</li>
+              <li key={v4()} className="project__point">
+                {p}
+              </li>
             ))}
           </ul>
         )}
@@ -29,7 +32,9 @@ const Project = (props: Types['Project']) => {
         {links.length > 0 && (
           <div className="project__links">
             {links.map((l) => (
-              <Link href={l.url}>{l.name}</Link>
+              <Link key={v4()} href={l.url}>
+                {l.name}
+              </Link>
             ))}
           </div>
         )}
