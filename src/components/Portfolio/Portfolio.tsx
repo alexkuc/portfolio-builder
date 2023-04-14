@@ -2,13 +2,20 @@ import { Button } from '../Button/Button';
 import { Card } from '../Card/Card';
 import { Main } from '../Main/Main';
 import { Photo } from '../Photo/Photo';
+import { Schemas, Types } from '../Schemas';
 import { Separator } from '../Separator/Separator';
 import { Text } from '../Text/Text';
 import './portfolio.scss';
 
-type Props = {};
+const Portfolio = (props: Types['Portfolio']) => {
+  const {
+    info: { name, intro, linkedin, email, phone },
+    jobs,
+    education,
+    training,
+    personal,
+  } = Schemas.Portfolio.parse(props);
 
-const Portfolio = ({}: Props) => {
   return (
     <div className="portfolio">
       <div className="portfolio__sidebar">
