@@ -9,7 +9,7 @@ const Job = (props: Types['Job']) => {
     Schemas.Job.parse(props);
 
   const header = (
-    <div className="job__header-container">
+    <div className="job__headers">
       <p className="job__header">{position}</p>
       <p className="job__header">{company}</p>
       <p className="job__header">
