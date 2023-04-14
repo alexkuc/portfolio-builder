@@ -27,12 +27,12 @@ const Job = (props: Types['Job']) => {
       <p className="job__summary">{summary}</p>
       {projects.length > 0 && (
         <>
-          <Separator />
+          <Separator type="dashed" />
           <div className="job__projects">
-            {projects.map((p, i) => (
+            {projects.map((p) => (
               <React.Fragment key={v4()}>
                 <Project {...p} />
-                {i !== projects.length - 1 && <Separator />}
+                <Separator type="dashed" />
               </React.Fragment>
             ))}
           </div>
