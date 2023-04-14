@@ -1,6 +1,5 @@
 import { Card } from '../Card/Card';
 import { Link } from '../Link/Link';
-import { Main } from '../Main/Main';
 import { Photo } from '../Photo/Photo';
 import { Schemas, Types } from '../Schemas';
 import { Separator } from '../Separator/Separator';
@@ -36,9 +35,9 @@ const Portfolio = (props: Types['Portfolio']) => {
         {training.length > 0 && <Link href="#training">Training</Link>}
         {personal.length > 0 && <Link href="#personal">Personal projects</Link>}
       </div>
-      <Main>
+      <div className="portfolio__content">
         <Card />
-      </Main>
+      </div>
     </div>
   );
 };
