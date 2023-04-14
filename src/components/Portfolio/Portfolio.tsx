@@ -18,6 +18,7 @@ const Portfolio = (props: Types['Portfolio']) => {
 
   return (
     <div className="portfolio">
+      <h1 className="portfolio__title">{name}</h1>
       <div className="portfolio__sidebar">
         <Photo />
         <Separator />
