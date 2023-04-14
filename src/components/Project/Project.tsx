@@ -2,18 +2,12 @@ import { v4 } from 'uuid';
 import { Card } from '../Card/Card';
 import { Link } from '../Link/Link';
 import { Schemas, Types } from '../Schemas';
-import { Separator } from '../Separator/Separator';
 import './project.scss';
 
 const Project = (props: Types['Project']) => {
   const { name, summary, points, links } = Schemas.Project.parse(props);
 
-  const header = (
-    <>
-      <p className="project__title">{name}</p>
-      <Separator />
-    </>
-  );
+  const header = <p className="project__title">{name}</p>;
 
   const children = (
     <>
@@ -27,7 +21,6 @@ const Project = (props: Types['Project']) => {
           ))}
         </ul>
       )}
-      <Separator />
       {links.length > 0 && (
         <div className="project__links">
           {links.map((l) => (
