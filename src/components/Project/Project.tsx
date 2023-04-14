@@ -17,32 +17,34 @@ const Project = (props: Types['Project']) => {
 
   const children = (
     <>
-      <div className="project">
-        <p className="project__summary">{summary}</p>
-        {points.length > 0 && (
-          <ul className="project__points">
-            {points.map((p) => (
-              <li key={v4()} className="project__point">
-                {p}
-              </li>
-            ))}
-          </ul>
-        )}
-        <Separator />
-        {links.length > 0 && (
-          <div className="project__links">
-            {links.map((l) => (
-              <Link key={v4()} href={l.url}>
-                {l.name}
-              </Link>
-            ))}
-          </div>
-        )}
-      </div>
+      <p className="project__summary">{summary}</p>
+      {points.length > 0 && (
+        <ul className="project__points">
+          {points.map((p) => (
+            <li key={v4()} className="project__point">
+              {p}
+            </li>
+          ))}
+        </ul>
+      )}
+      <Separator />
+      {links.length > 0 && (
+        <div className="project__links">
+          {links.map((l) => (
+            <Link key={v4()} href={l.url}>
+              {l.name}
+            </Link>
+          ))}
+        </div>
+      )}
     </>
   );
 
-  return <Card header={header}>{children}</Card>;
+  return (
+    <div className="project">
+      <Card header={header}>{children}</Card>;
+    </div>
+  );
 };
 
 export { Project };
