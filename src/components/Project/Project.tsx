@@ -4,6 +4,7 @@ import { Header } from '../Header/Header';
 import { Link } from '../Link/Link';
 import { Paragraph } from '../Paragraph/Paragraph';
 import { Schemas, Types } from '../Schemas';
+import { Separator } from '../Separator/Separator';
 import './project.scss';
 
 const Project = (props: Types['Project']) => {
@@ -13,6 +14,7 @@ const Project = (props: Types['Project']) => {
 
   const children = (
     <>
+      <Separator type="dashed" />
       <Paragraph>{summary}</Paragraph>
       {points.length > 0 && (
         <ul className="project__points">
