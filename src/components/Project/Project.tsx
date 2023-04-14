@@ -42,7 +42,7 @@ const Project = (props: Types['Project']) => {
 
   return (
     <div className="project">
-      <Card header={header}>{children}</Card>;
+      <Card header={header}>{children}</Card>
     </div>
   );
 };
