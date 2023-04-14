@@ -3,7 +3,6 @@ import { Card } from '../Card/Card';
 import { Main } from '../Main/Main';
 import { Photo } from '../Photo/Photo';
 import { Separator } from '../Separator/Separator';
-import { Sidebar } from '../Sidebar/Sidebar';
 import { Text } from '../Text/Text';
 import './portfolio.scss';
 
@@ -12,7 +11,7 @@ type Props = {};
 const Portfolio = ({}: Props) => {
   return (
     <div className="portfolio">
-      <Sidebar>
+      <div className="portfolio__sidebar">
         <Photo />
         <Separator />
         <Text>
@@ -28,7 +27,7 @@ const Portfolio = ({}: Props) => {
         <Button onClick={() => 'TODO:'}>Education</Button>
         <Button onClick={() => 'TODO:'}>Training</Button>
         <Button onClick={() => 'TODO:'}>Personal projects</Button>
-      </Sidebar>
+      </div>
       <Main>
         <Card />
       </Main>
