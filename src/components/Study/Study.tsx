@@ -1,4 +1,5 @@
 import { Card } from '../Card/Card';
+import { Paragraph } from '../Paragraph/Paragraph';
 import { Schemas, Types } from '../Schemas';
 import { Separator } from '../Separator/Separator';
 import './study.scss';
@@ -9,11 +10,14 @@ const Study = (props: Types['Study']) => {
 
   return (
     <div className="study">
-      <Card>
-        {institution}
-        <Separator />
-        {qualiftication}
-        {start.toFormat('LLL')}-{end ? end.toFormat('LLL') : 'current'}
+      <Card iStatus="open">
+        <Paragraph>{institution}</Paragraph>
+        <Separator type="dashed" />
+        <Paragraph>{qualiftication}</Paragraph>
+        <Paragraph>
+          {start.toFormat('LLL yyyy')} -{' '}
+          {end ? end.toFormat('LLL yyyy') : 'current'}
+        </Paragraph>
       </Card>
     </div>
   );
