@@ -39,10 +39,10 @@ const Portfolio = (props: Types['Portfolio']) => {
       <div className="portfolio__content">
         {jobs.length > 0 && (
           <>
-            <h2 className="portfolio__subtitle">Work Experience</h2>
             {jobs.map((j) => (
               <Job key={v4()} {...j} />
             ))}
+            <h2 className="portfolio__header">Work Experience</h2>
           </>
         )}
       </div>
