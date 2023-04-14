@@ -560,7 +560,46 @@ const data: Types['Portfolio'] = {
       end: DateTime.fromFormat('15.06.20', 'dd.MM.yy'),
     },
   ],
-  training: [],
+  training: [
+    {
+      name: 'Training Course A',
+      summary:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed lacinia risus, efficiturcursus odio. Suspendisse consectetur erat at neque gravida sagittis. Vivamus et orci.',
+      links: [
+        {
+          name: 'Link A',
+          url: 'https://www.google.com/',
+        },
+        {
+          name: 'Link B',
+          url: 'https://www.google.com/',
+        },
+        {
+          name: 'Link C',
+          url: 'https://www.google.com/',
+        },
+      ],
+    },
+    {
+      name: 'Training Course B',
+      summary:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed lacinia risus, efficiturcursus odio. Suspendisse consectetur erat at neque gravida sagittis. Vivamus et orci.',
+      links: [
+        {
+          name: 'Link A',
+          url: 'https://www.google.com/',
+        },
+        {
+          name: 'Link B',
+          url: 'https://www.google.com/',
+        },
+        {
+          name: 'Link C',
+          url: 'https://www.google.com/',
+        },
+      ],
+    },
+  ],
   personal: [],
 };
 
