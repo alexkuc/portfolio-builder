@@ -7,7 +7,7 @@ const Photo = ({}: Props) => {
     <div className="photo">
       <img
         className="photo__image"
-        src="http://placehold.it/350x450"
+        src="https://placehold.it/350x450"
         alt="photo"
       />
     </div>
