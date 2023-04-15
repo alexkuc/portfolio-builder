@@ -1,12 +1,27 @@
-.portfolio {
+body {
   @include font;
   background-color: whitesmoke;
+}
+
+.portfolio {
   padding: 2.5rem 1rem;
+
+  @include tablet {
+    width: 80%;
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2.5rem;
+  }
 }
 
 .portfolio__title {
   font-size: 3rem;
   margin-block-end: 1rem;
+
+  @include tablet {
+    width: 100%;
+  }
 }
 
 .portfolio__sidebar {
@@ -16,6 +31,18 @@
   background-color: gainsboro;
   padding: 1rem;
   margin-block-end: 1rem;
+
+  @include tablet {
+    width: min-content;
+    height: min-content;
+  }
+}
+
+.portfolio__content {
+  @include tablet {
+    flex-grow: 1;
+    width: min-content;
+  }
 }
 
 .portfolio__photo {
