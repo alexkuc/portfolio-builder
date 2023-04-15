@@ -27,18 +27,21 @@ const Card = ({ iStatus, header, showBorder = false, children }: Props) => {
 
   const headerCss = classNames({
     card__header: true,
-    'card__header--open': status === 'open',
-    'card__header--closed': status === 'closed',
+    'card__header--clickable': children,
+    'card__header--open': children && status === 'open',
+    'card__header--closed': children && status === 'closed',
   });
 
   return (
     <div className={cardCss}>
       {header && (
-        <div onClick={toggle} className={headerCss}>
+        <div onClick={children ? toggle : undefined} className={headerCss}>
           {header}
         </div>
       )}
-      {status === 'open' && <div className="card__content">{children}</div>}
+      {status === 'open' && children && (
+        <div className="card__content">{children}</div>
+      )}
     </div>
   );
 };
