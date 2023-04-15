@@ -48,22 +48,42 @@ const Portfolio = (props: Types['Portfolio']) => {
           <Separator type="dashed" />
           <div className="portfolio__anchors">
             {jobs.length > 0 && (
-              <Link href="#work" target="" type="button">
+              <Link
+                href="#work"
+                target=""
+                type="button"
+                className="portfolio__anchor"
+              >
                 Work experience
               </Link>
             )}
             {education.length > 0 && (
-              <Link href="#education" target="" type="button">
+              <Link
+                href="#education"
+                target=""
+                type="button"
+                className="portfolio__anchor"
+              >
                 Education
               </Link>
             )}
             {training.length > 0 && (
-              <Link href="#training" target="" type="button">
+              <Link
+                href="#training"
+                target=""
+                type="button"
+                className="portfolio__anchor"
+              >
                 Training
               </Link>
             )}
             {personal.length > 0 && (
-              <Link href="#personal" target="" type="button">
+              <Link
+                href="#personal"
+                target=""
+                type="button"
+                className="portfolio__anchor"
+              >
                 Personal projects
               </Link>
             )}
@@ -72,7 +92,9 @@ const Portfolio = (props: Types['Portfolio']) => {
         <div className="portfolio__content">
           {jobs.length > 0 && (
             <>
-              <H2 id="work">Work Experience</H2>
+              <H2 id="work" className="portfolio__header--work">
+                Work Experience
+              </H2>
               <Cards>
                 {jobs.map((j) => (
                   <Job key={v4()} {...j} />
