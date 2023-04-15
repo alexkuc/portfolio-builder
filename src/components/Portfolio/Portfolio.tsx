@@ -72,7 +72,7 @@ const Portfolio = (props: Types['Portfolio']) => {
         <div className="portfolio__content">
           {jobs.length > 0 && (
             <>
-              <Header id="work">Work Experience</Header>
+              <H2 id="work">Work Experience</H2>
               <Cards>
                 {jobs.map((j) => (
                   <Job key={v4()} {...j} />
@@ -82,7 +82,7 @@ const Portfolio = (props: Types['Portfolio']) => {
           )}
           {education.length > 0 && (
             <>
-              <Header id="education">Education</Header>
+              <H2 id="education">Education</H2>
               <Cards>
                 {education.map((e) => (
                   <Study key={v4()} {...e} />
@@ -92,7 +92,7 @@ const Portfolio = (props: Types['Portfolio']) => {
           )}
           {training.length > 0 && (
             <>
-              <Header id="training">Training</Header>
+              <H2 id="training">Training</H2>
               <Cards>
                 {training.map((t) => (
                   <Course key={v4()} {...t} />
@@ -102,7 +102,7 @@ const Portfolio = (props: Types['Portfolio']) => {
           )}
           {personal.length > 0 && (
             <>
-              <Header id="personal">Personal Projects</Header>
+              <H2 id="personal">Personal Projects</H2>
               <Cards>
                 {personal.map((p) => (
                   <Project key={v4()} {...p} />
@@ -116,11 +116,11 @@ const Portfolio = (props: Types['Portfolio']) => {
   );
 };
 
-type Header = {
+type H2 = {
   children: React.ReactNode;
 } & JSX.IntrinsicElements['h2'];
 
-const Header = ({ children, className, ...props }: Header) => {
+const H2 = ({ children, className, ...props }: H2) => {
   const css = classNames({
     portfolio__header: true,
     [`${className}`]: !!className,
