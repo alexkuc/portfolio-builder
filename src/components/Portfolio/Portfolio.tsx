@@ -4,11 +4,11 @@ import { v4 } from 'uuid';
 import { Course } from '../Course/Course';
 import { Job } from '../Job/Job';
 import { Link } from '../Link/Link';
+import { Paragraph } from '../Paragraph/Paragraph';
 import { Project } from '../Project/Project';
 import { Schemas, Types } from '../Schemas';
 import { Separator } from '../Separator/Separator';
 import { Study } from '../Study/Study';
-import { Text } from '../Text/Text';
 import './portfolio.scss';
 
 const Portfolio = (props: Types['Portfolio']) => {
@@ -44,7 +44,7 @@ const Portfolio = (props: Types['Portfolio']) => {
             </div>
           )}
           <Separator type="dashed" />
-          <Text className="portfolio__intro">{intro}</Text>
+          <Paragraph className="portfolio__intro">{intro}</Paragraph>
           <Separator type="dashed" />
           <div className="portfolio__anchors">
             {jobs.length > 0 && (
