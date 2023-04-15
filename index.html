@@ -14,7 +14,29 @@
     <title>Portfolio</title>
     <script type="module" defer src="/src/entry.tsx"></script>
   </head>
-  <body>
+  <body class="nojs">
     <div id="entry"></div>
+    <script type="text/javascript">
+      document.body.classList.remove('noscript');
+    </script>
+    <style>
+      .nojs {
+        height: 100vh;
+      }
+      .noscript {
+        display: block;
+        position: relative;
+        inset-block-start: 50%;
+        inset-inline-start: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3rem;
+        font-weight: 700;
+        color: red;
+        text-align: center;
+      }
+    </style>
+    <noscript class="noscript">
+      Please enable JavaScript as it is required for ReactJS
+    </noscript>
   </body>
 </html>
