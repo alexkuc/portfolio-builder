@@ -1,6 +1,7 @@
 import React from 'react';
 import { v4 } from 'uuid';
 import { Card } from '../Card/Card';
+import { Paragraph } from '../Paragraph/Paragraph';
 import { Project } from '../Project/Project';
 import { Schemas, Types } from '../Schemas';
 import { Separator } from '../Separator/Separator';
@@ -12,19 +13,19 @@ const Job = (props: Types['Job']) => {
 
   const header = (
     <div className="job__headers">
-      <p className="job__header">{position}</p>
-      <p className="job__header">{company}</p>
-      <p className="job__header">
+      <Paragraph>{position}</Paragraph>
+      <Paragraph>{company}</Paragraph>
+      <Paragraph>
         {start.toFormat('LLL yyyy')} -{' '}
         {end ? end.toFormat('LLL yyyy') : 'current'}
-      </p>
+      </Paragraph>
     </div>
   );
 
   const content = (
     <>
       <Separator />
-      <p className="job__summary">{summary}</p>
+      <Paragraph>{summary}</Paragraph>
       {projects.length > 0 && (
         <>
           <Separator type="dashed" />
