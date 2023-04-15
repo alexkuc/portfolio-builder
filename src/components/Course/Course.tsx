@@ -1,6 +1,8 @@
 import { v4 } from 'uuid';
 import { Card } from '../Card/Card';
+import { Header } from '../Header/Header';
 import { Link } from '../Link/Link';
+import { Paragraph } from '../Paragraph/Paragraph';
 import { Schemas, Types } from '../Schemas';
 import { Separator } from '../Separator/Separator';
 import './course.scss';
@@ -8,17 +10,18 @@ import './course.scss';
 const Course = (props: Types['Course']) => {
   const { name, summary, links } = Schemas.Course.parse(props);
 
-  const header = <p className="course__title">{name}</p>;
+  const header = <Header>{name}</Header>;
 
   const children = (
     <>
-      <p className="project__summary">{summary}</p>
+      <Separator />
+      <Paragraph>{summary}</Paragraph>
       {links.length > 0 && (
         <>
-          <Separator />
+          <Separator type="dashed" />
           <ul className="project__links">
             {links.map((l) => (
-              <Link key={v4()} href={l.url}>
+              <Link key={v4()} href={l.url} type="button">
                 {l.name}
               </Link>
             ))}
