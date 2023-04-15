@@ -18,7 +18,7 @@ const Project = ({ showBorder = true, ...props }: Props) => {
   const children = (
     <>
       <Separator type="dashed" />
-      <Paragraph>{summary}</Paragraph>
+      <Paragraph className="project__summary">{summary}</Paragraph>
       {points.length > 0 && (
         <ul className="project__points">
           {points.map((p) => (

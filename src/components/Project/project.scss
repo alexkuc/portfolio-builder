@@ -6,10 +6,14 @@
   gap: 1rem;
 }
 
+.project__summary {
+  margin-block-end: 2rem;
+}
+
 .project__points {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1.25rem;
 
   @include tablet {
     align-items: flex-start;
