@@ -1,3 +1,11 @@
+.project__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+}
+
 .project__points {
   display: flex;
   flex-direction: column;
@@ -22,12 +30,4 @@
 
 .point__content {
   font-size: 1rem;
-}
-
-.project__links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 1rem;
 }
