@@ -9,3 +9,10 @@
     @content;
   }
 }
+
+@mixin desktop {
+  // https://stackoverflow.com/a/51993054
+  @media only screen and (min-width: 64rem /* 1024px */) {
+    @content;
+  }
+}
