@@ -37,7 +37,7 @@ const Portfolio = (props: Types['Portfolio']) => {
           </div>
         )}
         <Separator />
-        <Text>{intro}</Text>
+        <Text className="portfolio__intro">{intro}</Text>
         <Separator />
         {jobs.length > 0 && <Link href="#work">Work experience</Link>}
         {education.length > 0 && <Link href="#education">Education</Link>}
