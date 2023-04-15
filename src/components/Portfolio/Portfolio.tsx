@@ -2,7 +2,6 @@ import { v4 } from 'uuid';
 import { Course } from '../Course/Course';
 import { Job } from '../Job/Job';
 import { Link } from '../Link/Link';
-import { Photo } from '../Photo/Photo';
 import { Project } from '../Project/Project';
 import { Schemas, Types } from '../Schemas';
 import { Separator } from '../Separator/Separator';
@@ -12,7 +11,7 @@ import './portfolio.scss';
 
 const Portfolio = (props: Types['Portfolio']) => {
   const {
-    info: { name, intro, linkedin, email, phone },
+    info: { name, photo, intro, linkedin, email, phone },
     jobs,
     education,
     training,
@@ -23,7 +22,13 @@ const Portfolio = (props: Types['Portfolio']) => {
     <div className="portfolio">
       <h1 className="portfolio__title">{name}</h1>
       <div className="portfolio__sidebar">
-        <Photo />
+        {photo && (
+          <img
+            src={photo}
+            alt={name.toLowerCase() + ' photo'}
+            className="portfolio__photo"
+          />
+        )}
         {(linkedin || email || phone) && (
           <div className="portfolio__contacts">
             {linkedin && <Link href={linkedin}>LinkedIn</Link>}
