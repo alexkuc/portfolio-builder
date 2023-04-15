@@ -1,4 +1,5 @@
 import { v4 } from 'uuid';
+import { Course } from '../Course/Course';
 import { Job } from '../Job/Job';
 import { Link } from '../Link/Link';
 import { Photo } from '../Photo/Photo';
@@ -54,6 +55,16 @@ const Portfolio = (props: Types['Portfolio']) => {
             <Cards>
               {education.map((e) => (
                 <Study key={v4()} {...e} />
+              ))}
+            </Cards>
+          </>
+        )}
+        {training.length > 0 && (
+          <>
+            <Header>Training</Header>
+            <Cards>
+              {training.map((t) => (
+                <Course key={v4()} {...t} />
               ))}
             </Cards>
           </>
