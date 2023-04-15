@@ -1,4 +1,3 @@
-import React from 'react';
 import { v4 } from 'uuid';
 import { Card } from '../Card/Card';
 import { Header } from '../Header/Header';
@@ -28,7 +27,7 @@ const Project = (props: Types['Project']) => {
       {links.length > 0 && (
         <div className="project__links">
           {links.map((l) => (
-            <Link key={v4()} className="project__link" href={l.url}>
+            <Link key={v4()} href={l.url} type="button">
               {l.name}
             </Link>
           ))}
