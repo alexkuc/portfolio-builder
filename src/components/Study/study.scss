@@ -1,0 +1,28 @@
+.study {
+}
+
+.study__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.study__paragraph {
+}
+
+.study__paragraph--hide-on-mobile {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.study__paragraph--hide-on-tablet {
+  display: block;
+  margin-block-start: 1rem;
+
+  @include tablet {
+    display: none;
+  }
+}

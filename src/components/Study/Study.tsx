@@ -11,10 +11,16 @@ const Study = (props: Types['Study']) => {
   return (
     <div className="study">
       <Card iStatus="open" showBorder={true}>
-        <Paragraph>{institution}</Paragraph>
+        <div className="study__container">
+          <Paragraph>{institution}</Paragraph>
+          <Paragraph className="study__paragraph study__paragraph--hide-on-mobile">
+            {start.toFormat('LLL yyyy')} -{' '}
+            {end ? end.toFormat('LLL yyyy') : 'current'}
+          </Paragraph>
+        </div>
         <Separator type="dashed" />
         <Paragraph>{qualiftication}</Paragraph>
-        <Paragraph>
+        <Paragraph className="study__paragraph study__paragraph--hide-on-tablet">
           {start.toFormat('LLL yyyy')} -{' '}
           {end ? end.toFormat('LLL yyyy') : 'current'}
         </Paragraph>
