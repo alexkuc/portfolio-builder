@@ -1,6 +1,5 @@
 import { v4 } from 'uuid';
 import { Card } from '../Card/Card';
-import { Header } from '../Header/Header';
 import { Link } from '../Link/Link';
 import { Paragraph } from '../Paragraph/Paragraph';
 import { Schemas, Types } from '../Schemas';
@@ -14,7 +13,7 @@ type Props = {
 const Project = ({ showBorder = true, ...props }: Props) => {
   const { name, summary, points, links } = Schemas.Project.parse(props);
 
-  const header = <Header>{name}</Header>;
+  const header = <Paragraph>{name}</Paragraph>;
 
   const children = (
     <>
