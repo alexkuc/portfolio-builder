@@ -27,88 +27,90 @@ const Portfolio = (props: Types['Portfolio']) => {
   return (
     <div className="portfolio">
       <h1 className="portfolio__title">{name}</h1>
-      <div className="portfolio__sidebar">
-        {photo && (
-          <img
-            src={photo}
-            alt={name.toLowerCase() + ' photo'}
-            className="portfolio__photo"
-          />
-        )}
-        {(linkedin || email || phone) && (
-          <div className="portfolio__contacts">
-            {linkedin && <Link href={linkedin}>LinkedIn</Link>}
-            {email && <Link href={`mailto:${email}`}>Email</Link>}
-            {phone && <Link href={`tel:${phone}`}>Phone</Link>}
+      <div className="portfolio__container">
+        <div className="portfolio__sidebar">
+          {photo && (
+            <img
+              src={photo}
+              alt={name.toLowerCase() + ' photo'}
+              className="portfolio__photo"
+            />
+          )}
+          {(linkedin || email || phone) && (
+            <div className="portfolio__contacts">
+              {linkedin && <Link href={linkedin}>LinkedIn</Link>}
+              {email && <Link href={`mailto:${email}`}>Email</Link>}
+              {phone && <Link href={`tel:${phone}`}>Phone</Link>}
+            </div>
+          )}
+          <Separator type="dashed" />
+          <Text className="portfolio__intro">{intro}</Text>
+          <Separator type="dashed" />
+          <div className="portfolio__anchors">
+            {jobs.length > 0 && (
+              <Link href="#work" target="" type="button">
+                Work experience
+              </Link>
+            )}
+            {education.length > 0 && (
+              <Link href="#education" target="" type="button">
+                Education
+              </Link>
+            )}
+            {training.length > 0 && (
+              <Link href="#training" target="" type="button">
+                Training
+              </Link>
+            )}
+            {personal.length > 0 && (
+              <Link href="#personal" target="" type="button">
+                Personal projects
+              </Link>
+            )}
           </div>
-        )}
-        <Separator type="dashed" />
-        <Text className="portfolio__intro">{intro}</Text>
-        <Separator type="dashed" />
-        <div className="portfolio__anchors">
+        </div>
+        <div className="portfolio__content">
           {jobs.length > 0 && (
-            <Link href="#work" target="" type="button">
-              Work experience
-            </Link>
+            <>
+              <Header id="work">Work Experience</Header>
+              <Cards>
+                {jobs.map((j) => (
+                  <Job key={v4()} {...j} />
+                ))}
+              </Cards>
+            </>
           )}
           {education.length > 0 && (
-            <Link href="#education" target="" type="button">
-              Education
-            </Link>
+            <>
+              <Header id="education">Education</Header>
+              <Cards>
+                {education.map((e) => (
+                  <Study key={v4()} {...e} />
+                ))}
+              </Cards>
+            </>
           )}
           {training.length > 0 && (
-            <Link href="#training" target="" type="button">
-              Training
-            </Link>
+            <>
+              <Header id="training">Training</Header>
+              <Cards>
+                {training.map((t) => (
+                  <Course key={v4()} {...t} />
+                ))}
+              </Cards>
+            </>
           )}
           {personal.length > 0 && (
-            <Link href="#personal" target="" type="button">
-              Personal projects
-            </Link>
+            <>
+              <Header id="personal">Personal Projects</Header>
+              <Cards>
+                {personal.map((p) => (
+                  <Project key={v4()} {...p} />
+                ))}
+              </Cards>
+            </>
           )}
         </div>
-      </div>
-      <div className="portfolio__content">
-        {jobs.length > 0 && (
-          <>
-            <Header id="work">Work Experience</Header>
-            <Cards>
-              {jobs.map((j) => (
-                <Job key={v4()} {...j} />
-              ))}
-            </Cards>
-          </>
-        )}
-        {education.length > 0 && (
-          <>
-            <Header id="education">Education</Header>
-            <Cards>
-              {education.map((e) => (
-                <Study key={v4()} {...e} />
-              ))}
-            </Cards>
-          </>
-        )}
-        {training.length > 0 && (
-          <>
-            <Header id="training">Training</Header>
-            <Cards>
-              {training.map((t) => (
-                <Course key={v4()} {...t} />
-              ))}
-            </Cards>
-          </>
-        )}
-        {personal.length > 0 && (
-          <>
-            <Header id="personal">Personal Projects</Header>
-            <Cards>
-              {personal.map((p) => (
-                <Project key={v4()} {...p} />
-              ))}
-            </Cards>
-          </>
-        )}
       </div>
     </div>
   );

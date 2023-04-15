@@ -7,8 +7,17 @@ body {
   padding: 2.5rem 1rem;
 
   @include tablet {
-    width: 80%;
+    margin-inline: 1rem;
+  }
+
+  @include desktop {
     margin-inline: auto;
+    max-width: 99.2rem;
+  }
+}
+
+.portfolio__container {
+  @include tablet {
     display: flex;
     flex-wrap: wrap;
     column-gap: 2.5rem;
@@ -18,10 +27,6 @@ body {
 .portfolio__title {
   font-size: 3rem;
   margin-block-end: 1rem;
-
-  @include tablet {
-    width: 100%;
-  }
 }
 
 .portfolio__sidebar {
