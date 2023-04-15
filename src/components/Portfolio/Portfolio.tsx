@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import { v4 } from 'uuid';
 import { Course } from '../Course/Course';
 import { Job } from '../Job/Job';
@@ -39,15 +40,31 @@ const Portfolio = (props: Types['Portfolio']) => {
         <Separator type="dashed" />
         <Text className="portfolio__intro">{intro}</Text>
         <Separator type="dashed" />
-        {jobs.length > 0 && <Link href="#work">Work experience</Link>}
-        {education.length > 0 && <Link href="#education">Education</Link>}
-        {training.length > 0 && <Link href="#training">Training</Link>}
-        {personal.length > 0 && <Link href="#personal">Personal projects</Link>}
+        {jobs.length > 0 && (
+          <Link href="#work" target="">
+            Work experience
+          </Link>
+        )}
+        {education.length > 0 && (
+          <Link href="#education" target="">
+            Education
+          </Link>
+        )}
+        {training.length > 0 && (
+          <Link href="#training" target="">
+            Training
+          </Link>
+        )}
+        {personal.length > 0 && (
+          <Link href="#personal" target="">
+            Personal projects
+          </Link>
+        )}
       </div>
       <div className="portfolio__content">
         {jobs.length > 0 && (
           <>
-            <Header>Work Experience</Header>
+            <Header id="work">Work Experience</Header>
             <Cards>
               {jobs.map((j) => (
                 <Job key={v4()} {...j} />
@@ -57,7 +74,7 @@ const Portfolio = (props: Types['Portfolio']) => {
         )}
         {education.length > 0 && (
           <>
-            <Header>Education</Header>
+            <Header id="education">Education</Header>
             <Cards>
               {education.map((e) => (
                 <Study key={v4()} {...e} />
@@ -67,7 +84,7 @@ const Portfolio = (props: Types['Portfolio']) => {
         )}
         {training.length > 0 && (
           <>
-            <Header>Training</Header>
+            <Header id="training">Training</Header>
             <Cards>
               {training.map((t) => (
                 <Course key={v4()} {...t} />
@@ -77,7 +94,7 @@ const Portfolio = (props: Types['Portfolio']) => {
         )}
         {personal.length > 0 && (
           <>
-            <Header>Personal Projects</Header>
+            <Header id="personal">Personal Projects</Header>
             <Cards>
               {personal.map((p) => (
                 <Project key={v4()} {...p} />
@@ -90,8 +107,20 @@ const Portfolio = (props: Types['Portfolio']) => {
   );
 };
 
-const Header = ({ children }: { children: React.ReactNode }) => {
-  return <h2 className="portfolio__header">{children}</h2>;
+type Header = {
+  children: React.ReactNode;
+} & JSX.IntrinsicElements['h2'];
+
+const Header = ({ children, className, ...props }: Header) => {
+  const css = classNames({
+    portfolio__header: true,
+    [`${className}`]: !!className,
+  });
+  return (
+    <h2 className={css} {...props}>
+      {children}
+    </h2>
+  );
 };
 
 const Cards = ({ children }: { children: React.ReactNode[] }) => {
