@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import { useEffect } from 'react';
 import { v4 } from 'uuid';
 import { Course } from '../Course/Course';
 import { Job } from '../Job/Job';
@@ -18,6 +19,10 @@ const Portfolio = (props: Types['Portfolio']) => {
     training,
     personal,
   } = Schemas.Portfolio.parse(props);
+
+  useEffect(() => {
+    document.title = 'Portfolio of ' + name;
+  }, []);
 
   return (
     <div className="portfolio">
