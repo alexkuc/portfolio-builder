@@ -3,6 +3,7 @@ import { Course } from '../Course/Course';
 import { Job } from '../Job/Job';
 import { Link } from '../Link/Link';
 import { Photo } from '../Photo/Photo';
+import { Project } from '../Project/Project';
 import { Schemas, Types } from '../Schemas';
 import { Separator } from '../Separator/Separator';
 import { Study } from '../Study/Study';
@@ -65,6 +66,16 @@ const Portfolio = (props: Types['Portfolio']) => {
             <Cards>
               {training.map((t) => (
                 <Course key={v4()} {...t} />
+              ))}
+            </Cards>
+          </>
+        )}
+        {personal.length > 0 && (
+          <>
+            <Header>Personal Projects</Header>
+            <Cards>
+              {personal.map((p) => (
+                <Project key={v4()} {...p} />
               ))}
             </Cards>
           </>
