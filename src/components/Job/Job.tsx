@@ -8,8 +8,14 @@ import { Separator } from '../Separator/Separator';
 import './job.scss';
 
 const Job = (props: Types['Job']) => {
-  const { company, position, start, end, summary, projects } =
-    Schemas.Job.parse(props);
+  const {
+    company,
+    position,
+    start,
+    end,
+    summary,
+    projects = [],
+  } = Schemas.Job.parse(props);
 
   const header = (
     <div className="job__headers">
