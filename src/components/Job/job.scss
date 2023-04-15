@@ -8,9 +8,50 @@
 
   @include tablet {
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     flex-grow: 1;
     margin-inline-end: 1rem;
+  }
+
+  @include desktop {
+  }
+}
+
+.job__header {
+}
+
+.job__header--position {
+  @include tablet {
+    order: 1;
+    flex-basis: 50%;
+  }
+
+  @include desktop {
+    order: initial;
+    flex-basis: initial;
+  }
+}
+
+.job__header--company {
+  @include tablet {
+    order: 3;
+  }
+
+  @include desktop {
+    order: initial;
+  }
+}
+
+.job__header--dates {
+  @include tablet {
+    order: 2;
+    transform: translateY(75%);
+  }
+
+  @include desktop {
+    order: initial;
+    transform: none;
   }
 }
 

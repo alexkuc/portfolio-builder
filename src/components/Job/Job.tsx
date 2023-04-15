@@ -13,9 +13,13 @@ const Job = (props: Types['Job']) => {
 
   const header = (
     <div className="job__headers">
-      <Paragraph>{position}</Paragraph>
-      <Paragraph>{company}</Paragraph>
-      <Paragraph>
+      <Paragraph className="job__header job__header--position">
+        {position}
+      </Paragraph>
+      <Paragraph className="job__header job__header--company">
+        {company}
+      </Paragraph>
+      <Paragraph className="job__header job__header--dates">
         {start.toFormat('LLL yyyy')} -{' '}
         {end ? end.toFormat('LLL yyyy') : 'current'}
       </Paragraph>
