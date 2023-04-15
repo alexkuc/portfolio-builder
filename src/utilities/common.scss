@@ -2,3 +2,9 @@
   font-family: 'Nunito', sans-serif;
   @content;
 }
+
+@mixin tablet {
+  @media only screen and (min-width: 76.8rem) {
+    @content;
+  }
+}
