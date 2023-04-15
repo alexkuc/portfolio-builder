@@ -6,13 +6,17 @@
 }
 
 .link--button {
-  width: 40%;
+  width: 50%;
   display: block;
   text-align: center;
   padding: 1rem 0.5rem;
   border: 1px solid black;
   border-radius: 0.5rem;
   text-decoration: none;
+
+  @include mobile {
+    width: 40%;
+  }
 
   @include tablet {
     width: fit-content;
