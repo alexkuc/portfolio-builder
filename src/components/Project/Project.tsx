@@ -52,7 +52,9 @@ const Point = ({ children }: { children: React.ReactNode }) => {
   return (
     <li className="point">
       <span className="point__marker" />
-      <span className="point__content">{children}</span>
+      <span className="point__content">
+        <Paragraph>{children}</Paragraph>
+      </span>
     </li>
   );
 };
