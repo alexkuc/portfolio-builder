@@ -31,7 +31,7 @@ const Job = (props: Types['Job']) => {
           <div className="job__projects">
             {projects.map((p) => (
               <React.Fragment key={v4()}>
-                <Project {...p} />
+                <Project {...p} showBorder={false} />
                 <Separator type="dashed" />
               </React.Fragment>
             ))}

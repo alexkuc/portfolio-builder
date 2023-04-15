@@ -7,7 +7,11 @@ import { Schemas, Types } from '../Schemas';
 import { Separator } from '../Separator/Separator';
 import './project.scss';
 
-const Project = (props: Types['Project']) => {
+type Props = {
+  showBorder?: boolean | undefined;
+} & Types['Project'];
+
+const Project = ({ showBorder = true, ...props }: Props) => {
   const { name, summary, points, links } = Schemas.Project.parse(props);
 
   const header = <Header>{name}</Header>;
@@ -38,7 +42,7 @@ const Project = (props: Types['Project']) => {
 
   return (
     <div className="project">
-      <Card header={header} showBorder={true}>
+      <Card header={header} showBorder={showBorder}>
         {children}
       </Card>
     </div>
