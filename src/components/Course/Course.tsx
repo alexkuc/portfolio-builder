@@ -30,7 +30,9 @@ const Course = (props: Types['Course']) => {
 
   return (
     <div className="course">
-      <Card header={header}>{children}</Card>
+      <Card header={header} showBorder={true}>
+        {children}
+      </Card>
     </div>
   );
 };

@@ -8,16 +8,22 @@ type Props = {
   /** initial status */
   iStatus?: Status | undefined;
   header?: React.ReactNode;
+  showBorder?: boolean | undefined;
   children: React.ReactNode | React.ReactNode[];
 };
 
-const Card = ({ iStatus, header, children }: Props) => {
+const Card = ({ iStatus, header, showBorder = false, children }: Props) => {
   const [status, setStatus] = useState<Status>(iStatus ?? 'closed');
 
   const toggle = () => {
     if (status === 'closed') setStatus('open');
     if (status === 'open') setStatus('closed');
   };
+
+  const cardCss = classNames({
+    card: true,
+    'card--border': showBorder,
+  });
 
   const headerCss = classNames({
     card__header: true,
@@ -26,7 +32,7 @@ const Card = ({ iStatus, header, children }: Props) => {
   });
 
   return (
-    <div className="card">
+    <div className={cardCss}>
       {header && (
         <div onClick={toggle} className={headerCss}>
           {header}

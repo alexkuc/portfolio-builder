@@ -43,7 +43,9 @@ const Job = (props: Types['Job']) => {
 
   return (
     <div className="job">
-      <Card header={header}>{content}</Card>
+      <Card header={header} showBorder={true}>
+        {content}
+      </Card>
     </div>
   );
 };

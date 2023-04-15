@@ -10,7 +10,7 @@ const Study = (props: Types['Study']) => {
 
   return (
     <div className="study">
-      <Card iStatus="open">
+      <Card iStatus="open" showBorder={true}>
         <Paragraph>{institution}</Paragraph>
         <Separator type="dashed" />
         <Paragraph>{qualiftication}</Paragraph>
