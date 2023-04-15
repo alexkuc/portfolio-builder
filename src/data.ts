@@ -600,7 +600,144 @@ const data: Types['Portfolio'] = {
       ],
     },
   ],
-  personal: [],
+  personal: [
+    {
+      name: 'Personal Project A',
+      summary:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor ex vitae tortor pulvinar, ac hendrerit metus pellentesque. Vivamus nunc mauris, consequat at rutrum et.',
+      points: [
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      ],
+      links: [
+        {
+          name: 'Library A',
+          url: 'https://www.npmjs.com/package/library-a',
+        },
+        {
+          name: 'Library B',
+          url: 'https://www.npmjs.com/package/library-b',
+        },
+        {
+          name: 'Library C',
+          url: 'https://www.npmjs.com/package/library-c',
+        },
+        {
+          name: 'Library D',
+          url: 'https://www.npmjs.com/package/library-d',
+        },
+        {
+          name: 'Library E',
+          url: 'https://www.npmjs.com/package/library-e',
+        },
+      ],
+    },
+    {
+      name: 'Personal Project B',
+      summary:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor ex vitae tortor pulvinar, ac hendrerit metus pellentesque. Vivamus nunc mauris, consequat at rutrum et.',
+      points: [
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      ],
+      links: [
+        {
+          name: 'Library A',
+          url: 'https://www.npmjs.com/package/library-a',
+        },
+        {
+          name: 'Library B',
+          url: 'https://www.npmjs.com/package/library-b',
+        },
+        {
+          name: 'Library C',
+          url: 'https://www.npmjs.com/package/library-c',
+        },
+        {
+          name: 'Library D',
+          url: 'https://www.npmjs.com/package/library-d',
+        },
+        {
+          name: 'Library E',
+          url: 'https://www.npmjs.com/package/library-e',
+        },
+      ],
+    },
+    {
+      name: 'Personal Project C',
+      summary:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor ex vitae tortor pulvinar, ac hendrerit metus pellentesque. Vivamus nunc mauris, consequat at rutrum et.',
+      points: [
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      ],
+      links: [
+        {
+          name: 'Library A',
+          url: 'https://www.npmjs.com/package/library-a',
+        },
+        {
+          name: 'Library B',
+          url: 'https://www.npmjs.com/package/library-b',
+        },
+        {
+          name: 'Library C',
+          url: 'https://www.npmjs.com/package/library-c',
+        },
+        {
+          name: 'Library D',
+          url: 'https://www.npmjs.com/package/library-d',
+        },
+        {
+          name: 'Library E',
+          url: 'https://www.npmjs.com/package/library-e',
+        },
+      ],
+    },
+    {
+      name: 'Personal Project D',
+      summary:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor ex vitae tortor pulvinar, ac hendrerit metus pellentesque. Vivamus nunc mauris, consequat at rutrum et.',
+      points: [
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      ],
+      links: [
+        {
+          name: 'Library A',
+          url: 'https://www.npmjs.com/package/library-a',
+        },
+        {
+          name: 'Library B',
+          url: 'https://www.npmjs.com/package/library-b',
+        },
+        {
+          name: 'Library C',
+          url: 'https://www.npmjs.com/package/library-c',
+        },
+        {
+          name: 'Library D',
+          url: 'https://www.npmjs.com/package/library-d',
+        },
+        {
+          name: 'Library E',
+          url: 'https://www.npmjs.com/package/library-e',
+        },
+      ],
+    },
+  ],
 };
 
 export default data;
