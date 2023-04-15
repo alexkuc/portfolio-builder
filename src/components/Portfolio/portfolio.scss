@@ -35,6 +35,9 @@ body {
   @include tablet {
     width: min-content;
     height: min-content;
+    position: sticky;
+    inset-block-start: 0;
+    inset-inline-start: 0;
   }
 }
 
