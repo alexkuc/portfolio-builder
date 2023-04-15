@@ -40,26 +40,28 @@ const Portfolio = (props: Types['Portfolio']) => {
         <Separator type="dashed" />
         <Text className="portfolio__intro">{intro}</Text>
         <Separator type="dashed" />
-        {jobs.length > 0 && (
-          <Link href="#work" target="">
-            Work experience
-          </Link>
-        )}
-        {education.length > 0 && (
-          <Link href="#education" target="">
-            Education
-          </Link>
-        )}
-        {training.length > 0 && (
-          <Link href="#training" target="">
-            Training
-          </Link>
-        )}
-        {personal.length > 0 && (
-          <Link href="#personal" target="">
-            Personal projects
-          </Link>
-        )}
+        <div className="portfolio__anchors">
+          {jobs.length > 0 && (
+            <Link href="#work" target="" type="button">
+              Work experience
+            </Link>
+          )}
+          {education.length > 0 && (
+            <Link href="#education" target="" type="button">
+              Education
+            </Link>
+          )}
+          {training.length > 0 && (
+            <Link href="#training" target="" type="button">
+              Training
+            </Link>
+          )}
+          {personal.length > 0 && (
+            <Link href="#personal" target="" type="button">
+              Personal projects
+            </Link>
+          )}
+        </div>
       </div>
       <div className="portfolio__content">
         {jobs.length > 0 && (
