@@ -55,7 +55,7 @@ const Job = (props: Types['Job']) => {
   return (
     <div className="job">
       <Card header={header} showBorder={true}>
-        {content}
+        {(summary || projects.length > 0) && content}
       </Card>
     </div>
   );
