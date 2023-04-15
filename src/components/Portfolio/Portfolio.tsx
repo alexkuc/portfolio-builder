@@ -36,9 +36,9 @@ const Portfolio = (props: Types['Portfolio']) => {
             {phone && <Link href={`tel:${phone}`}>Phone</Link>}
           </div>
         )}
-        <Separator />
+        <Separator type="dashed" />
         <Text className="portfolio__intro">{intro}</Text>
-        <Separator />
+        <Separator type="dashed" />
         {jobs.length > 0 && <Link href="#work">Work experience</Link>}
         {education.length > 0 && <Link href="#education">Education</Link>}
         {training.length > 0 && <Link href="#training">Training</Link>}
