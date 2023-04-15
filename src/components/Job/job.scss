@@ -15,6 +15,7 @@
   }
 
   @include desktop {
+    flex-wrap: nowrap;
   }
 }
 
@@ -24,22 +25,25 @@
 .job__header--position {
   @include tablet {
     order: 1;
-    flex-basis: 50%;
   }
 
   @include desktop {
     order: initial;
-    flex-basis: initial;
+    width: 30%;
+    text-align: start;
   }
 }
 
 .job__header--company {
   @include tablet {
     order: 3;
+    width: 100%;
   }
 
   @include desktop {
     order: initial;
+    width: 45%;
+    text-align: center;
   }
 }
 
@@ -52,6 +56,8 @@
   @include desktop {
     order: initial;
     transform: none;
+    width: 25%;
+    text-align: end;
   }
 }
 
