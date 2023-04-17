@@ -1,7 +1,12 @@
 import { DateTime as DT } from 'luxon';
+import React from 'react';
 import z from 'zod';
 
 const DateTime = z.custom<DT>((arg) => arg instanceof DT);
+
+const ReactNode = z.custom<React.ReactNode>((arg) => true);
+
+const StringOrFragment = z.union([z.string(), ReactNode]);
 
 const Link = z.object({
   name: z.string(),
@@ -10,8 +15,8 @@ const Link = z.object({
 
 const Project = z.object({
   name: z.string(),
-  summary: z.string().or(z.string().array()),
-  points: z.string().array(),
+  summary: StringOrFragment.or(StringOrFragment.array()),
+  points: StringOrFragment.array(),
   links: Link.array(),
 });
 
@@ -20,7 +25,7 @@ const Job = z.object({
   company: z.string(),
   start: DateTime,
   end: DateTime.optional().describe('show "current" instead of end date'),
-  summary: z.string().or(z.string().array()),
+  summary: StringOrFragment,
   projects: Project.array().optional(),
 });
 
