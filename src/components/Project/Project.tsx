@@ -13,7 +13,7 @@ type Props = {
 const Project = ({ showBorder = true, ...props }: Props) => {
   const { name, summary, points, links } = Schemas.Project.parse(props);
 
-  const header = <Paragraph>{name}</Paragraph>;
+  const header = <Paragraph className="project__name">{name}</Paragraph>;
 
   const getSummary = () => {
     if (!summary) return [];
