@@ -38,8 +38,8 @@ const Study = z.object({
 
 const Course = z.object({
   name: z.string(),
-  summary: z.string(),
-  links: Link.array(),
+  summary: z.string().optional(),
+  links: Link.array().optional(),
 });
 
 const Info = z.object({

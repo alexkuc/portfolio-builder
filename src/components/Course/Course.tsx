@@ -14,8 +14,8 @@ const Course = (props: Types['Course']) => {
   const children = (
     <>
       <Separator />
-      <Paragraph>{summary}</Paragraph>
-      {links.length > 0 && (
+      {summary && <Paragraph>{summary}</Paragraph>}
+      {links && links.length > 0 && (
         <>
           <Separator type="dashed" />
           <ul className="project__links">
