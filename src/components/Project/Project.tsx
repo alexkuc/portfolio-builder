@@ -15,10 +15,18 @@ const Project = ({ showBorder = true, ...props }: Props) => {
 
   const header = <Paragraph>{name}</Paragraph>;
 
+  const summaryArr = typeof summary === 'object' ? summary : [summary];
+
   const children = (
     <>
       <Separator type="dashed" />
-      <Paragraph className="project__summary">{summary}</Paragraph>
+      <div className="project__summaries">
+        {summaryArr.map((s) => (
+          <Paragraph key={v4()} className="project__summary">
+            {s}
+          </Paragraph>
+        ))}
+      </div>
       {points.length > 0 && (
         <ul className="project__points">
           {points.map((p) => (

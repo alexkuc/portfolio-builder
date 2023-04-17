@@ -6,6 +6,12 @@
   gap: 1rem;
 }
 
+.project__summaries {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 .project__summary {
 }
 

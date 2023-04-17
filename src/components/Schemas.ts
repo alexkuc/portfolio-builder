@@ -10,7 +10,7 @@ const Link = z.object({
 
 const Project = z.object({
   name: z.string(),
-  summary: z.string(),
+  summary: z.string().or(z.string().array()),
   points: z.string().array(),
   links: Link.array(),
 });
