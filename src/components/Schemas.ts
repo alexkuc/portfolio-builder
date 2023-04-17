@@ -15,9 +15,9 @@ const Link = z.object({
 
 const Project = z.object({
   name: z.string(),
-  summary: StringOrFragment.or(StringOrFragment.array()),
-  points: StringOrFragment.array(),
-  links: Link.array(),
+  summary: StringOrFragment.or(StringOrFragment.array()).optional(),
+  points: StringOrFragment.array().optional(),
+  links: Link.array().optional(),
 });
 
 const Job = z.object({

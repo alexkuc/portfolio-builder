@@ -15,26 +15,32 @@ const Project = ({ showBorder = true, ...props }: Props) => {
 
   const header = <Paragraph>{name}</Paragraph>;
 
-  const summaryArr = typeof summary === 'object' ? summary : [summary];
+  const getSummary = () => {
+    if (!summary) return [];
+    if (Array.isArray(summary)) return summary;
+    return [summary];
+  };
 
   const children = (
     <>
       <Separator type="dashed" />
-      <div className="project__summaries">
-        {summaryArr.map((s) => (
-          <Paragraph key={v4()} className="project__summary">
-            {s}
-          </Paragraph>
-        ))}
-      </div>
-      {points.length > 0 && (
+      {summary && (
+        <div className="project__summaries">
+          {getSummary().map((s) => (
+            <Paragraph key={v4()} className="project__summary">
+              {s}
+            </Paragraph>
+          ))}
+        </div>
+      )}
+      {points && points.length > 0 && (
         <ul className="project__points">
           {points.map((p) => (
             <Point key={v4()}>{p}</Point>
           ))}
         </ul>
       )}
-      {links.length > 0 && (
+      {links && links.length > 0 && (
         <>
           <Separator type="dashed" />
           <div className="project__links">
