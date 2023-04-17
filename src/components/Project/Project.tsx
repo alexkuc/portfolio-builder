@@ -26,15 +26,17 @@ const Project = ({ showBorder = true, ...props }: Props) => {
           ))}
         </ul>
       )}
-      <Separator type="dashed" />
       {links.length > 0 && (
-        <div className="project__links">
-          {links.map((l) => (
-            <Link key={v4()} href={l.url} type="button">
-              {l.name}
-            </Link>
-          ))}
-        </div>
+        <>
+          <Separator type="dashed" />
+          <div className="project__links">
+            {links.map((l) => (
+              <Link key={v4()} href={l.url} type="button">
+                {l.name}
+              </Link>
+            ))}
+          </div>
+        </>
       )}
     </>
   );
