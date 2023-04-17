@@ -32,10 +32,18 @@ const Job = (props: Types['Job']) => {
     </div>
   );
 
+  const summaryArr = typeof summary === 'object' ? summary : [summary];
+
   const content = (
     <>
       <Separator />
-      <Paragraph>{summary}</Paragraph>
+      <div className="job__summaries">
+        {summaryArr.map((s) => (
+          <Paragraph key={v4()} className="job__summary">
+            {s}
+          </Paragraph>
+        ))}
+      </div>
       {projects.length > 0 && (
         <>
           <Separator type="dashed" />

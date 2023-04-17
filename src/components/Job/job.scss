@@ -61,5 +61,14 @@
   }
 }
 
+.job__summaries {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.job__summary {
+}
+
 .job__projects {
 }

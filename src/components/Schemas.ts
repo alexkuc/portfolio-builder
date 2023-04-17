@@ -20,7 +20,7 @@ const Job = z.object({
   company: z.string(),
   start: DateTime,
   end: DateTime.optional().describe('show "current" instead of end date'),
-  summary: z.string().optional(),
+  summary: z.string().or(z.string().array()),
   projects: Project.array().optional(),
 });
 
