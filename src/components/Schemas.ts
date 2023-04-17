@@ -10,7 +10,7 @@ const StringOrFragment = z.union([z.string(), ReactNode]);
 
 const Link = z.object({
   name: z.string(),
-  url: z.string().url(),
+  href: z.string().url(),
 });
 
 const Project = z.object({

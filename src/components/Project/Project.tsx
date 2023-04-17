@@ -45,7 +45,7 @@ const Project = ({ showBorder = true, ...props }: Props) => {
           <Separator type="dashed" />
           <div className="project__links">
             {links.map((l) => (
-              <Link key={v4()} href={l.url} type="button">
+              <Link key={v4()} href={l.href} type="button">
                 {l.name}
               </Link>
             ))}
