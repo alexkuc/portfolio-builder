@@ -58,7 +58,10 @@ const Project = ({ showBorder = true, ...props }: Props) => {
   return (
     <div className="project">
       <Card header={header} showBorder={showBorder}>
-        {children}
+        {(summary ||
+          (points && points.length > 0) ||
+          (links && links.length > 0)) &&
+          children}
       </Card>
     </div>
   );
