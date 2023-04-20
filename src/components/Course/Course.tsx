@@ -7,7 +7,7 @@ import { Separator } from '../Separator/Separator';
 import './course.scss';
 
 const Course = (props: Types['Course']) => {
-  const { name, summary, links } = Schemas.Course.parse(props);
+  const { name, summary, completion, links } = Schemas.Course.parse(props);
 
   const header = <Paragraph>{name}</Paragraph>;
 
@@ -15,6 +15,11 @@ const Course = (props: Types['Course']) => {
     <>
       <Separator />
       {summary && <Paragraph>{summary}</Paragraph>}
+      {completion && (
+        <Paragraph className="course__completition">
+          Completed on {completion.toFormat('LLL yyyy')}
+        </Paragraph>
+      )}
       {summary && links && links.length > 0 && <Separator type="dashed" />}
       {links && links.length > 0 && (
         <>
