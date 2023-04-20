@@ -19,6 +19,7 @@
 // css triangle: https://stackoverflow.com/a/7091927
 .card__header::after {
   content: '';
+  margin-inline-start: 0.5rem;
   border: 0.7rem solid transparent;
 
   @include tablet {
