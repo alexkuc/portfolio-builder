@@ -23,6 +23,7 @@ const Course = (props: Types['Course']) => {
       {summary && links && links.length > 0 && <Separator type="dashed" />}
       {links && links.length > 0 && (
         <>
+          {(summary || completion) && <Separator type="dashed" />}
           <ul className="project__links">
             {links.map((l) => (
               <Link key={v4()} href={l.href} type="button">
