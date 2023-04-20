@@ -39,6 +39,7 @@ const Study = z.object({
 const Course = z.object({
   name: z.string(),
   summary: z.string().optional(),
+  completion: DateTime.optional().describe('when the course was completed'),
   links: Link.array().optional(),
 });
 
