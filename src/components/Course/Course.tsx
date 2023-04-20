@@ -13,7 +13,7 @@ const Course = (props: Types['Course']) => {
 
   const children = (
     <>
-      <Separator />
+      <Separator type="dashed" />
       {summary && <Paragraph>{summary}</Paragraph>}
       {completion && (
         <Paragraph className="course__completition">
