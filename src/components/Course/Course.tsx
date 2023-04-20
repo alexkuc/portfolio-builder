@@ -15,9 +15,9 @@ const Course = (props: Types['Course']) => {
     <>
       <Separator />
       {summary && <Paragraph>{summary}</Paragraph>}
+      {summary && links && links.length > 0 && <Separator type="dashed" />}
       {links && links.length > 0 && (
         <>
-          <Separator type="dashed" />
           <ul className="project__links">
             {links.map((l) => (
               <Link key={v4()} href={l.href} type="button">
