@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Portfolio } from './components/Portfolio/Portfolio';
-import data from './data';
+import portfolio from './data/data';
 
 document.addEventListener('DOMContentLoaded', () => {
   const selector = '#entry';
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!selector) throw new Error('Where is #root?');
   const rootEl = (
     <React.StrictMode>
-      <Portfolio {...data} />
+      <Portfolio {...portfolio} />
     </React.StrictMode>
   );
   ReactDOM.createRoot(root as HTMLElement).render(rootEl);
