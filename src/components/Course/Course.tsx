@@ -17,7 +17,7 @@ const Course = (props: Types['Course']) => {
       {summary && <Paragraph>{summary}</Paragraph>}
       {completion && (
         <Paragraph className="course__completition">
-          Completed on {completion.toFormat('LLL yyyy')}
+          Completed on {completion.toFormat('dd LLL yyyy')}
         </Paragraph>
       )}
       {summary && links && links.length > 0 && <Separator type="dashed" />}
