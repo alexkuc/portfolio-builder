@@ -163,12 +163,14 @@ const Developer: Types['Job'] = {
     },
     {
       name: 'TranslatePress fix',
-      summary: '', // TODO:
+      summary:
+        'A third party plugin called TranslatePress has inherit design limitations that would result in mangled urls. I have reverse engineered the undocumented WordPress actions and wrote a custom plugin to overcome those limitations.',
       links: [],
     },
     {
       name: 'Multidomain support',
-      summary: '', // TODO:
+      summary:
+        'Out-of-the-box, WordPress only supports absolute urls. This presents an issue when it comes to pipelines and staging environments. Using core WordPress actions and filters, I have written a custom plugin that would produce root-relative urls removing the need to search-and-replace urls.',
       links: [],
     },
     {
