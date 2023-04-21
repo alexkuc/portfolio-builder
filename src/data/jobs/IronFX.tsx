@@ -12,9 +12,13 @@ const Developer: Types['Job'] = {
     {
       name: 'eCommerce project',
       summary:
-        'A prototype of headless WordPress CMS integrated with wooCommerce to allow pipeline creation.',
+        'A prototype of headless WordPress CMS integrated with wooCommerce to allow pipeline creation. The integration was done by means of REST endpoint and React.',
       links: [
         { name: 'wooCommerce', href: 'https://woocommerce.com' },
+        {
+          name: 'React',
+          href: 'https://react.dev',
+        },
         {
           name: 'react-router',
           href: 'https://www.npmjs.com/package/react-router',
@@ -28,18 +32,26 @@ const Developer: Types['Job'] = {
     {
       name: 'Ranking tables',
       summary:
-        'A widget that displays information from internal endpoint point in a tabular data.',
+        'A widget that displays information from internal endpoint point in a tabular data. The fetched data was filtered and adapted by means of JSON middleware. Then it was exposed to the frontend by means of public REST endpoint. In the frontend, React was consuming the data and displaying it accordingly.',
       links: [
+        {
+          name: 'React',
+          href: 'https://react.dev',
+        },
         {
           name: 'TypeScript',
           href: 'https://www.typescriptlang.org',
+        },
+        {
+          name: 'json-mapper',
+          href: 'https://packagist.org/packages/json-mapper/json-mapper',
         },
       ],
     },
     {
       name: 'Monorepo plugin',
       summary:
-        'A monorepo-style plugin that provides widgets and various backend functionality for a number of brands',
+        'A monorepo-style plugin that provides widgets and various backend functionality for a number of brands. By using a monorepo pattern, I was able to re-use common utility classes across different brands substantially cutting down the development time.',
     },
     {
       name: 'Seminars',
@@ -179,8 +191,9 @@ const Developer: Types['Job'] = {
         'A prototype of contact form plugin that would support various brands which flexibility to override implementation details on a per brand basis.',
     },
     {
-      name: 'A website',
-      summary: 'A simple static website using Foundation framework',
+      name: 'Brand-specific website',
+      summary:
+        'A simple static website using Foundation framework. This was my very first assignment in IronFX.',
       links: [
         {
           name: 'Foundation',
