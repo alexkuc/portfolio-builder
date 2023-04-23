@@ -13,13 +13,13 @@
     <title>Portfolio</title>
     <script type="module" defer src="/src/entry.tsx"></script>
   </head>
-  <body class="nojs">
+  <body class="js-disabled">
     <div id="entry"></div>
     <script type="text/javascript">
-      document.body.classList.remove('nojs');
+      document.body.classList.remove('js-disabled');
     </script>
     <style>
-      .nojs {
+      .js-disabled {
         height: 100vh;
       }
       noscript {
