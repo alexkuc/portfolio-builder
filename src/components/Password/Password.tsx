@@ -4,20 +4,23 @@ import './password.scss';
 type Props = {
   children: React.ReactNode | React.ReactNode[];
   hash: string;
+  disabled?: boolean | undefined;
 };
 
 type State = string | null;
 
-const Password = ({ children, hash }: Props) => {
+const Password = ({ children, hash, disabled }: Props) => {
+  if (!disabled) disabled = false;
+
   const [attempt, setAttempt] = useState<State>(null);
-  const [unlocked, setUnlocked] = useState(false);
+  const [unlocked, setUnlocked] = useState(disabled);
 
   const promptPass = () => {
     setAttempt(window.prompt('Please enter password'));
   };
 
   useEffect(() => {
-    promptPass();
+    !disabled && promptPass();
   }, []);
 
   useEffect(() => {
@@ -28,7 +31,7 @@ const Password = ({ children, hash }: Props) => {
     });
   }, [attempt]);
 
-  return <>{unlocked && children}</>;
+  return <>{(unlocked || disabled) && children}</>;
 };
 
 type Algorithm = 'SHA-1' | 'SHA-256' | 'SHA-384' | 'SHA-512';
