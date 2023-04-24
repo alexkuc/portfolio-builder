@@ -12,7 +12,12 @@ const ITTeamLeader: Types['Job'] = {
     {
       name: 'IT Department restructure',
       summary:
-        'I have overhauled department by converting it into Kanban-style management where Trello was the primary tool for keeping track of tasks. Additionally, I have introduced code-based budgetting & expenses tracking. This gave transparency into expenses & assets of the department.Finally, I have reduced capital expenditure of the department by switching to OpEx model instead of CapEx.',
+        'I have overhauled department by converting it into Kanban-style management where Trello was the primary tool for keeping track of tasks. Additionally, I have introduced code-based budgetting & expenses tracking. This gave transparency into expenses & assets of the department.Finally, I have reduced capital expenditure of the department by switching to OpEx model instead of CapEx. Operations-wise, I have introduced checklists and procedures by means of Trello templates for routine tasks such as onboarding a new employee or provisioning a new hardware for them. This ensured consistent and high quality of work avoid "Oops, I forgot..." moments from the IT department.',
+    },
+    {
+      name: 'Documentation and internal audit',
+      summary:
+        "I have performed an internal audit and have created a comprehensive internal documentation of the IT systems. As the company was spread between 6 geo-remote offices in Russia, Ukraine, Singapore, and UK, having an up-to-date documentation was paramount. The documentation consisted of network map, purchased licenses and inventory. The network map was created in LucidChart and provided both, a top level topology overview as well as fine details like port numbers. Information on purchases licenses scattered all over the places so I have diligently assembled everything and stored it in Confluence. The information included invoices, license numbers, activation limit and the machine where it was activated as well as vendor's contact information. Invetory included information about on-premise servers, office laptops and desktops. Information included network MACs, serial numbers, and related.",
     },
     {
       name: 'On-premise servers migration',
@@ -28,6 +33,16 @@ const ITTeamLeader: Types['Job'] = {
       name: 'MODX to WordPress migration',
       summary:
         "I was actively involved with migrating the main company's website from MODX to WordPress. To avoid any SEO-related penalties, I was very careful to preserve existing url structure, tags and related as it is during the migration.",
+    },
+    {
+      name: 'Domain tracking and dnmin',
+      summary:
+        'As a part of business operations, each client required a simple website that was hosted on their on domain. Given that there were dozens of domains that had different expiry dates as well as renewal procedures, a centralized system for keeping track of them was necessary. I have consolidated and centralized this process using FOSS or Free Open Source Software called dnmin.',
+    },
+    {
+      name: 'Sage 50c Accounts and SPS training',
+      summary:
+        "For its operations, the company was using Sage 50c Accounts for book keeping and Sage Practice Solutions for overall management of work. This in turned required me to become a domain expert on these 2 pieces of software in order to provide daily Q&A as well as clear communicate with the vendor's support line. Of course, it has helped that I do have a basic knowledge of debit and credit accounting model.",
     },
   ],
 };
