@@ -4,7 +4,7 @@ import { resolve } from 'path';
 import { defineConfig, loadEnv } from 'vite';
 
 // https://vitejs.dev/config/#conditional-config
-export default defineConfig(({ mode }) => {
+export default defineConfig(({ mode, command }) => {
   // https://stackoverflow.com/a/66389044
   process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
 
@@ -27,6 +27,7 @@ export default defineConfig(({ mode }) => {
   const srcPath = resolve(__dirname, './src');
 
   return {
+    base: command === 'build' ? '/portfolio-builder/' : '/',
     plugins: [react()],
     server: {
       host,
