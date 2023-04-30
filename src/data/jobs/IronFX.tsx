@@ -6,41 +6,17 @@ const WebTechLead: Types['Job'] = {
   company: 'IronFX',
   start: date('01.23'),
   summary:
-    'As a Web Tech Lead, it is my responsibility to drive technical architure and day-to-day technical decisions. These activities range from mandane tasks like choosing a library to developing a website architecture and finding appropriate technical solutions to deliver given technical requirements. To date, I have been working almost my entire on the Academy project.',
+    'It is my duty as a web tech lead to direct technical architecture and daily technical decisions. These jobs range from routine ones like selecting a library to more involved ones like creating a website architecture and identifying the best technical options to meet specific technical requirements. I have spent practically all of my time working on the Academy project to this point.',
   projects: [
     {
       name: 'LMS project',
       points: [],
       summary: [
-        <>
-          The nature of this project is to provide online learning coursesusing
-          LMS or Learning Management System. I am the sole person responsible
-          for implementing business logic into actual code and bridging it with
-          internal systems.
-        </>,
-        <>
-          I was the key driver behind the project timeline and estimation. I
-          have broken down the initially given requirements into milestones and
-          features. The approximate time for each was gauged using T-shirt sizes
-          and my colleagues, who participated in the planning poker.
-        </>,
-        <>
-          Login and registration forms were implemented using React, TypeScript,
-          Formik and custom WP REST endpoint. This allowed to create isomorphic
-          code between backend and frontend which was necessary for SugarCRM
-          integration. It required additional email verification step which was
-          also implemented using custom code.
-        </>,
-        <>
-          Google Tag Manager integration was done using SSE or Server-sent
-          events as 3/4 of the events was coming from WordPress side. SSE
-          implementation features a simple concurrency lock and grace lifecycle
-          for events which prevents duplicate events.
-        </>,
-        <>
-          I have overhauled the security of the implementation but details are
-          omitted to prevent accidentally exposing them to public.
-        </>,
+        "This project's focus is on offering online courses that make use of a learning management system called LearnDash. The lone person in charge of turning business logic into actual code and connecting it to internal systems is me.",
+        "I played a major role in setting the project's estimation and timetable. The initial set of requirements has been divided into features and milestones by myself. Using t-shirt sizes, me and my colleagues have estimated the duration of each task using the planner poker method.",
+        'The implementation of the login and registration forms made use of React, TypeScript, Formik, and a customized WP REST endpoint. This made it possible to write the isomorphic code required for SugarCRM integration between the backend and the frontend. Additional email verification was needed, and that step was also implemented using custom code.',
+        'SSE, or server-sent events, were used for Google Tag Manager integration since the majority of events came from the WordPress side. The SSE implementation uses a straightforward grace lifecycle for events and concurrency locks to prevent duplicating events.',
+        "I have completely reworked the implementation's security, but I've withheld the specifics to avoid unintentionally making them public.",
       ],
       links: [
         {
@@ -50,6 +26,10 @@ const WebTechLead: Types['Job'] = {
         {
           name: 'TypeScript',
           href: 'https://www.typescriptlang.org',
+        },
+        {
+          name: 'Zod',
+          href: 'https://npmjs.com/package/zod',
         },
         {
           name: 'Formik',
@@ -78,12 +58,12 @@ const Developer: Types['Job'] = {
   start: date('03.21'),
   end: date('12.22'),
   summary:
-    'I have joined IronFX as a WordPress developer where I have knowledge of React & TypeScript which allowed to deliver custom widgets. Not only that, I was actively helping DevOps which pipeline implementation. From the generic overview down to technical details like adjusting nginx config files.',
+    'I joined IronFX as a WordPress developer, and through learning React and TypeScript, I was able to produce bespoke widgets. In addition, I actively supported DevOps in putting the pipeline into place. This included anything from offering direction during planning sessions to helping DevOps modify nginx config files.',
   projects: [
     {
       name: 'eCommerce project',
       summary:
-        'A prototype of headless WordPress CMS integrated with wooCommerce to allow pipeline creation. The integration was done by means of REST endpoint and React.',
+        'A headless WordPress prototype that was separated from wooCommerce using REST APIs to enable pipeline construction.',
       links: [
         { name: 'wooCommerce', href: 'https://woocommerce.com' },
         {
@@ -103,7 +83,7 @@ const Developer: Types['Job'] = {
     {
       name: 'Ranking tables',
       summary:
-        'A widget that displays information from internal endpoint point in a tabular data. The fetched data was filtered and adapted by means of JSON middleware. Then it was exposed to the frontend by means of public REST endpoint. In the frontend, React was consuming the data and displaying it accordingly.',
+        'A widget that displays data from an internal API in table format. The requested data was modified and filtered using JSON middleware. A public REST endpoint was used to make it available to the front end, where React displayed it as needed.',
       links: [
         {
           name: 'React',
@@ -122,12 +102,12 @@ const Developer: Types['Job'] = {
     {
       name: 'Monorepo plugin',
       summary:
-        'A monorepo-style plugin that provides widgets and various backend functionality for a number of brands. By using a monorepo pattern, I was able to re-use common utility classes across different brands substantially cutting down the development time.',
+        "A plugin in the monorepo style that offers widgets and numerous backend features for a number of the company's brands. I was able to significantly reduce the development time by reusing common utility classes across many brands thanks to the monorepo pattern.",
     },
     {
       name: 'Seminars',
       summary:
-        'A custom React-based plugin to provide a seminars frontend widget with a matching backend admin page',
+        'A unique React plugin to provide a front-end widget for seminars with a corresponding back-end admin page',
       links: [
         {
           name: 'React',
@@ -170,7 +150,7 @@ const Developer: Types['Job'] = {
     {
       name: 'Webinars',
       summary:
-        'A custom React-based plugin to provide a webinars frontend widget with a matching backend admin page',
+        'A unique React plugin to provide a front-end webinars widget and corresponding back-end admin page',
       links: [
         {
           name: 'React',
@@ -217,7 +197,7 @@ const Developer: Types['Job'] = {
     {
       name: 'Contact form using Gravity Forms',
       summary:
-        'A straight forward contact form using Gravity Forms plugin. Upon form submission, two emails are sent out - one for the addressee and the other for the support team.',
+        'A simple contact form created with the Gravity Forms plugin. Two emails — one for the addressee and the other for the support team — are sent after the form is submitted.',
       links: [
         {
           name: 'Twig',
@@ -232,7 +212,7 @@ const Developer: Types['Job'] = {
     {
       name: 'SQL parser',
       summary:
-        'A PHP-based cli command to bulk update urls. When migrating a website from Drupal to Wordpress, a third party agency made a critical error where they had forgot to include a sub-folder in the path. Given that it was a live website, changing path would be catastrophic for SEO. So instead of manually update urls, I have written a small utility to speed up the process.',
+        'A bulk URL update command using PHP. A third-party agency made a crucial mistake when converting a website from Drupal to Wordpress since they neglected to include a sub-folder in the path. Being a live website, changing directions would be disastrous for SEO. As a result, I created a tiny application to speed up the process rather than manually updating URLs.',
       links: [
         {
           name: 'Laravel Zero',
@@ -247,24 +227,24 @@ const Developer: Types['Job'] = {
     {
       name: 'TranslatePress fix',
       summary:
-        'A third party plugin called TranslatePress has inherit design limitations that would result in mangled urls. I have reverse engineered the undocumented WordPress actions and wrote a custom plugin to overcome those limitations.',
+        "A third-party plugin by the name of TranslatePress has inherent design flaws that would break URLs. To get around those restrictions, I created a custom plugin by reverse engineering WordPress' undocumented actions and filters.",
       links: [],
     },
     {
       name: 'Multidomain support',
       summary:
-        'Out-of-the-box, WordPress only supports absolute urls. This presents an issue when it comes to pipelines and staging environments. Using core WordPress actions and filters, I have written a custom plugin that would produce root-relative urls removing the need to search-and-replace urls.',
+        'Only absolute URLs are supported out of the box by WordPress. This poses a challenge in terms of pipelines and staging environments. The requirement for the search-and-replace urls command was removed when I made a custom plugin that would produce root-relative urls using core WordPress actions and filters.',
       links: [],
     },
     {
       name: 'Multi-brand contact form',
       summary:
-        'A prototype of contact form plugin that would support various brands which flexibility to override implementation details on a per brand basis.',
+        'A working prototype of a contact form plugin that would handle numerous brands and allow for individual brand-specific overrides.',
     },
     {
       name: 'Brand-specific website',
       summary:
-        'A simple static website using Foundation framework. This was my very first assignment in IronFX.',
+        'An easy-to-use static website built with the Foundation framework My first task in IronFX was this one.',
       links: [
         {
           name: 'Foundation',
