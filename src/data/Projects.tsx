@@ -3,7 +3,7 @@ import { Types } from '../components/Schemas';
 const portfolioBuilder: Types['Project'] = {
   name: 'Portfolio builder',
   summary:
-    'This portfolio is not a collection of hard-coded HTML elements but rather a builder. There are common purpose re-usable components which are fed data from JSON file. This allows me to easily keep my portfolio up-to-date as I would need to update only JSON data file.',
+    'This portfolio is a builder rather than a collection of HTML elements that have been hard-coded. Data from a JSON file is fed into general-purpose, reusable components. As I would only need to update the JSON data file, I am able to easily keep my portfolio up to date.',
   links: [
     {
       name: 'Source',
@@ -35,7 +35,7 @@ const portfolioBuilder: Types['Project'] = {
 const useFilters: Types['Project'] = {
   name: 'useFilters',
   summary:
-    'useFilters is a React-based hook that allows to filter arbitary data. It is written in TypeScript to take advantage of generics. The hook is scalable as it supports nested filters and arbitary data type as well as filters. Implementation has also unit tests.',
+    'A React-based hook called useFilters enables filtering of arbitrary data. It is written in TypeScript in order to use generics. This hook supports nested filters, and there is no limit to the number of nesting levels. Unit tests are available too.',
   links: [
     {
       name: 'npm',
@@ -59,7 +59,7 @@ const useFilters: Types['Project'] = {
 const meetingPlanner: Types['Project'] = {
   name: 'Meeting planner (private)',
   summary:
-    'Meeting planner is a React-based SPA that allows multiple people in multiple timezones to find overlapping available time. To make the process user-friendly, for each user, you just click on a table to mark specific time slot as available. This is currently in-active development which is why I did not make this publically available yet.',
+    "Users can find overlapping free time by using the Meeting Planner, a React-based SPA that supports multiple time zones. It makes use of an intuitive table-based user interface to make the process more user-friendly. This is currently in development; therefore, I haven't made it open to the general public yet.",
   links: [
     {
       name: 'React',
@@ -95,7 +95,7 @@ const meetingPlanner: Types['Project'] = {
 const chartJsPlugin: Types['Project'] = {
   name: 'ChartJS donut chart plugin',
   summary:
-    'When working on Dashboard project, I have come across chart.js plugin that provides donut charts. Unfortunately, it was not compatible with v2 so I had to do my own port of the plugin',
+    'I discovered the chart.js plugin that offers donut charts while working on the Dashboard project. I had to create my own port of the plugin because, unfortunately, it was incompatible with v2.',
   links: [
     {
       name: 'npm',
