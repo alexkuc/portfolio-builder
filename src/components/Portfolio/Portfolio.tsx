@@ -14,7 +14,7 @@ const Portfolio = (props: Types['Portfolio']) => {
   const portfolio = Schemas.Portfolio.parse(props);
 
   const {
-    info: { name, about, linkedin, email, phone },
+    info: { name, about, address, linkedin, email, phone },
     jobs,
     education,
     training,
@@ -28,6 +28,11 @@ const Portfolio = (props: Types['Portfolio']) => {
   return (
     <div className="portfolio">
       <h1 className="portfolio__title">{name}</h1>
+      {address && (
+        <Paragraph className="portfolio__address">
+          Location: {address}
+        </Paragraph>
+      )}
       <div className="portfolio__contacts">
         {linkedin && <Link href={linkedin}>LinkedIn</Link>}
         {email && <Link href={`mailto:${email}`}>Email</Link>}
