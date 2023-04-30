@@ -5,6 +5,8 @@ import { Projects } from './Projects';
 import { Jobs } from './jobs/Jobs';
 import { Training } from './training/Training';
 
+// LATER: check links to include all important libraries
+
 const data: Types['Portfolio'] = {
   info: {
     name: 'Alexander Kucheryuk',
