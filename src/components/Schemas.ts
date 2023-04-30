@@ -47,6 +47,7 @@ const Info = z.object({
   name: z.string(),
   photo: z.string().url().optional(),
   intro: z.string().optional().describe('sidebar text'),
+  about: z.record(z.string(), z.string()).optional().describe('content text'),
   linkedin: z.string().url().optional(),
   email: z.string().email().optional(),
   phone: z.string().optional(),
