@@ -30,6 +30,11 @@ body {
   margin-block-end: 1rem;
 }
 
+.portfolio__contacts {
+  display: flex;
+  column-gap: 3rem;
+}
+
 .portfolio__content {
   @include tablet {
     flex-grow: 1;

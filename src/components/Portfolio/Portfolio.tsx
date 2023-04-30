@@ -1,8 +1,10 @@
 import classNames from 'classnames';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { v4 } from 'uuid';
 import { Course } from '../Course/Course';
 import { Job } from '../Job/Job';
+import { Link } from '../Link/Link';
+import { Paragraph } from '../Paragraph/Paragraph';
 import { Project } from '../Project/Project';
 import { Schemas, Types } from '../Schemas';
 import { Study } from '../Study/Study';
@@ -12,7 +14,7 @@ const Portfolio = (props: Types['Portfolio']) => {
   const portfolio = Schemas.Portfolio.parse(props);
 
   const {
-    info: { name },
+    info: { name, linkedin, email, phone },
     jobs,
     education,
     training,
@@ -26,6 +28,11 @@ const Portfolio = (props: Types['Portfolio']) => {
   return (
     <div className="portfolio">
       <h1 className="portfolio__title">{name}</h1>
+      <div className="portfolio__contacts">
+        {linkedin && <Link href={linkedin}>LinkedIn</Link>}
+        {email && <Link href={`mailto:${email}`}>Email</Link>}
+        {phone && <Link href={`tel:${phone}`}>Phone</Link>}
+      </div>
       <div className="portfolio__container">
         <div className="portfolio__content">
           {jobs.length > 0 && (
