@@ -46,6 +46,7 @@ const Course = z.object({
 const Info = z.object({
   name: z.string(),
   photo: z.string().url().optional(),
+  address: z.string().optional(),
   intro: z.string().optional().describe('sidebar text'),
   about: z.record(z.string(), z.string()).optional().describe('content text'),
   linkedin: z.string().url().optional(),
