@@ -3,22 +3,22 @@ import { useEffect } from 'react';
 import { v4 } from 'uuid';
 import { Course } from '../Course/Course';
 import { Job } from '../Job/Job';
-import { Link } from '../Link/Link';
-import { Paragraph } from '../Paragraph/Paragraph';
 import { Project } from '../Project/Project';
 import { Schemas, Types } from '../Schemas';
-import { Separator } from '../Separator/Separator';
+import { Sidebar } from '../Sidebar/Sidebar';
 import { Study } from '../Study/Study';
 import './portfolio.scss';
 
 const Portfolio = (props: Types['Portfolio']) => {
+  const portfolio = Schemas.Portfolio.parse(props);
+
   const {
-    info: { name, photo, intro, linkedin, email, phone },
+    info: { name },
     jobs,
     education,
     training,
     personal,
-  } = Schemas.Portfolio.parse(props);
+  } = portfolio;
 
   useEffect(() => {
     document.title = 'Portfolio of ' + name;
@@ -28,67 +28,7 @@ const Portfolio = (props: Types['Portfolio']) => {
     <div className="portfolio">
       <h1 className="portfolio__title">{name}</h1>
       <div className="portfolio__container">
-        <div className="portfolio__sidebar">
-          {photo && (
-            <img
-              src={photo}
-              alt={name.toLowerCase() + ' photo'}
-              className="portfolio__photo"
-            />
-          )}
-          {(linkedin || email || phone) && (
-            <div className="portfolio__contacts">
-              {linkedin && <Link href={linkedin}>LinkedIn</Link>}
-              {email && <Link href={`mailto:${email}`}>Email</Link>}
-              {phone && <Link href={`tel:${phone}`}>Phone</Link>}
-            </div>
-          )}
-          <Separator type="dashed" />
-          <Paragraph className="portfolio__intro">{intro}</Paragraph>
-          <Separator type="dashed" />
-          <div className="portfolio__anchors">
-            {jobs.length > 0 && (
-              <Link
-                href="#work"
-                target=""
-                type="button"
-                className="portfolio__anchor"
-              >
-                Work experience
-              </Link>
-            )}
-            {education.length > 0 && (
-              <Link
-                href="#education"
-                target=""
-                type="button"
-                className="portfolio__anchor"
-              >
-                Education
-              </Link>
-            )}
-            {training.length > 0 && (
-              <Link
-                href="#training"
-                target=""
-                type="button"
-                className="portfolio__anchor"
-              >
-                Training
-              </Link>
-            )}
-            {personal.length > 0 && (
-              <Link
-                href="#personal"
-                target=""
-                type="button"
-                className="portfolio__anchor"
-              >
-                Personal projects
-              </Link>
-            )}
-          </div>
-        </div>
+        <Sidebar {...portfolio} />
         <div className="portfolio__content">
           {jobs.length > 0 && (
             <>
