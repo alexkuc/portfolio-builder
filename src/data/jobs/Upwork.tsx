@@ -4,7 +4,7 @@ import { date } from '../data';
 const Upwork: Types['Job'] = {
   position: 'WordPress Freelancer',
   summary:
-    'For some time, I have worked as a WordPress freelancer on a platform called Upwork. While I have worked on several small projects, my biggest accomplishment here is the Dashboard plugin.',
+    'I used to work as a freelance WordPress developer on Upwork. Although I have worked on a few small projects, the Dashboard plugin has been my most notable accomplishment there.',
   company: 'Upwork',
   start: date('11.20'),
   end: date('03.21'),
@@ -12,7 +12,7 @@ const Upwork: Types['Job'] = {
     {
       name: 'Dashboard plugin',
       summary:
-        'A custom WordPress plugin that fetches Excel spreadsheets from Dropbox and displays beautiful charts on the dashboard interface. To make the import process unattended, I have used Dropbox API that requires OAuth2.0. Furthermore, there is a period background process to refresh data to speed up page loading.',
+        'A custom WordPress plugin that pulls Excel files from Dropbox and shows lovely charts on the dashboard interface. I used the OAuth 2.0-required Dropbox API to make the import process automatic. In order to speed up page loading, there is also a periodic background operation that refreshes data.',
       links: [
         {
           name: 'chart.js',
