@@ -14,7 +14,7 @@ const Portfolio = (props: Types['Portfolio']) => {
   const portfolio = Schemas.Portfolio.parse(props);
 
   const {
-    info: { name, linkedin, email, phone },
+    info: { name, about, linkedin, email, phone },
     jobs,
     education,
     training,
@@ -34,6 +34,15 @@ const Portfolio = (props: Types['Portfolio']) => {
         {phone && <Link href={`tel:${phone}`}>Phone</Link>}
       </div>
       <div className="portfolio__container">
+        <div className="portfolio__about">
+          {about &&
+            Object.entries(about).map(([h2, paragraph]) => (
+              <React.Fragment key={h2}>
+                <H2>{h2}</H2>
+                <Paragraph>{paragraph}</Paragraph>
+              </React.Fragment>
+            ))}
+        </div>
         <div className="portfolio__content">
           {jobs.length > 0 && (
             <>

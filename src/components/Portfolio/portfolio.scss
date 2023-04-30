@@ -35,6 +35,10 @@ body {
   column-gap: 3rem;
 }
 
+.portfolio__about {
+  margin-block-end: 2.5rem;
+}
+
 .portfolio__content {
   @include tablet {
     flex-grow: 1;
