@@ -28,16 +28,26 @@ const Portfolio = (props: Types['Portfolio']) => {
   return (
     <div className="portfolio">
       <h1 className="portfolio__title">{name}</h1>
-      {address && (
-        <Paragraph className="portfolio__address">
-          Location: {address}
-        </Paragraph>
+      {(phone || email || linkedin || address) && (
+        <div className="portfolio__contacts">
+          {phone && (
+            <Paragraph>
+              <Link href={`tel:${phone}`}>{phone}</Link>
+            </Paragraph>
+          )}
+          {linkedin && (
+            <Paragraph>
+              <Link href={linkedin}>{linkedin}</Link>
+            </Paragraph>
+          )}
+          {email && (
+            <Paragraph>
+              <Link href={`mailto:${email}`}>{email}</Link>
+            </Paragraph>
+          )}
+          {address && <Paragraph>{address}</Paragraph>}
+        </div>
       )}
-      <div className="portfolio__contacts">
-        {linkedin && <Link href={linkedin}>LinkedIn</Link>}
-        {email && <Link href={`mailto:${email}`}>Email</Link>}
-        {phone && <Link href={`tel:${phone}`}>Phone</Link>}
-      </div>
       <div className="portfolio__container">
         <div className="portfolio__about">
           {about &&

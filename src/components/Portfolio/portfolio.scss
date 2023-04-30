@@ -30,17 +30,18 @@ body {
   margin-block-end: 1rem;
 }
 
-.portfolio__address {
-  margin-block-end: 1rem;
+.portfolio__about {
+  margin-block-end: 2.5rem;
 }
 
 .portfolio__contacts {
   display: flex;
-  column-gap: 3rem;
-}
+  flex-direction: column;
+  gap: 1.5rem;
 
-.portfolio__about {
-  margin-block-end: 2.5rem;
+  @include tablet {
+    gap: 0.75rem;
+  }
 }
 
 .portfolio__content {
