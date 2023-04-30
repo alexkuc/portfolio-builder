@@ -5,7 +5,6 @@ import { Course } from '../Course/Course';
 import { Job } from '../Job/Job';
 import { Project } from '../Project/Project';
 import { Schemas, Types } from '../Schemas';
-import { Sidebar } from '../Sidebar/Sidebar';
 import { Study } from '../Study/Study';
 import './portfolio.scss';
 
@@ -28,7 +27,6 @@ const Portfolio = (props: Types['Portfolio']) => {
     <div className="portfolio">
       <h1 className="portfolio__title">{name}</h1>
       <div className="portfolio__container">
-        <Sidebar {...portfolio} />
         <div className="portfolio__content">
           {jobs.length > 0 && (
             <>

@@ -19,6 +19,7 @@ body {
 .portfolio__container {
   @include tablet {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     column-gap: 2.5rem;
   }
@@ -32,6 +33,7 @@ body {
 .portfolio__content {
   @include tablet {
     flex-grow: 1;
+    width: 100%;
   }
 }
 
