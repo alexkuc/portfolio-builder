@@ -5,19 +5,19 @@ const FeedSyndicate: Types['Job'] = {
   position: 'WordPress Developer',
   company: 'FeedSyndicate',
   summary:
-    'My very first client and project as a starting WordPress freelancer. I was able to land this contract before I have started my higher education. When my university has started, I have continued to work on this contract part-time.',
+    'My first assignment and client as a fledgling WordPress freelancer. Before I began my college studies, I was able to secure this contract. I have continued to work on this contract part-time since the start of my undergraduate studies.',
   start: date('11.14'),
   end: date('11.16'),
   projects: [
     {
       name: 'Status page plugin',
       summary:
-        'A simple WordPress plugin that peridocally pulls MySQL information from cacti and displays that information in a user-friendly manner. Basically, it is a very simple status page for non-technical users.',
+        'A straightforward WordPress plugin that periodically extracts MySQL data from cacti and presents the data in a user-friendly manner. For non-technical users, it basically just serves as a status page.',
     },
     {
       name: 'FeedSyndicate',
       summary:
-        'A WordPress plugin that calls public endpoint, fetches RSS data from it and parses (imports) it as WordPress that can be mapped to custom categories. Please keep in mind that at the time I was working on the plugin, it was in good standing and had 4+ stars reviews for it.',
+        'A plugin for WordPress that makes calls to public endpoints, retrieves RSS feeds from them, and parses (imports) the data so that it can be assigned to specific categories Please remember that the plugin was in good standing and had received reviews with four or more stars at the time I was working on it.',
       links: [
         {
           name: 'Link',
