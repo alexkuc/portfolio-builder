@@ -64,6 +64,7 @@ const data: Types['Portfolio'] = {
     Projects.OmniFocusProjects,
     Projects.OmniFocusDeadlines,
     Projects.OmniFocusDefer,
+    Projects.RemoteDevServer,
   ],
 };
 

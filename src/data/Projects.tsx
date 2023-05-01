@@ -1,4 +1,5 @@
 import { Types } from '../components/Schemas';
+import { Badge } from './badges';
 import { Link } from './links';
 
 const PortfolioBuilder: Types['Project'] = {
@@ -248,7 +249,20 @@ const OmniFocusDefer: Types['Project'] = {
   ],
 };
 
-// LATER: https://github.com/alexkuc/remote-dev-server-scripts
+const RemoteDevServer: Types['Project'] = {
+  name: 'Remote Dev Server Script',
+  summary:
+    'OS-independent Bash scripts that synchronize changes from a local to a remote development server',
+  links: [
+    Link.GitHub({ repo: 'remote-dev-server-scripts' }),
+    Link.Bash,
+    Link.make('DigitalOcean', 'https://www.digitalocean.com'),
+    Link.make('doctl', 'https://docs.digitalocean.com/reference/doctl/'),
+    Badge.make('rsync'),
+    Badge.make('fswatch'),
+    Badge.make('scp'),
+  ],
+};
 
 const Projects = {
   PortfolioBuilder,
@@ -265,6 +279,7 @@ const Projects = {
   OmniFocusProjects,
   OmniFocusDeadlines,
   OmniFocusDefer,
+  RemoteDevServer,
 };
 
 export { Projects };
