@@ -228,7 +228,17 @@ const OmniFocusDeadlines: Types['Project'] = {
   ],
 };
 
-// LATER: https://github.com/alexkuc/omnifocus-defer-script
+const OmniFocusDefer: Types['Project'] = {
+  name: 'OmniFocus Defer Script',
+  summary: 'Set defer date of the task in a smart way',
+  links: [
+    Link.GitHub({ repo: 'omnifocus-defer-script' }),
+    Link.make(
+      'Featured',
+      'https://inside.omnifocus.com/collected#:~:text=Defer%20Tasks%20Intelligently%20with%20OmniFocus%20Defer%2C%20by%20Alexander%20Kucheryuk'
+    ),
+  ],
+};
 
 // LATER: https://github.com/alexkuc/remote-dev-server-scripts
 
@@ -246,6 +256,7 @@ const Projects = {
   LastPass,
   OmniFocusProjects,
   OmniFocusDeadlines,
+  OmniFocusDefer,
 };
 
 export { Projects };

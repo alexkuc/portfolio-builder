@@ -63,6 +63,7 @@ const data: Types['Portfolio'] = {
     Projects.LastPass,
     Projects.OmniFocusProjects,
     Projects.OmniFocusDeadlines,
+    Projects.OmniFocusDefer,
   ],
 };
 
