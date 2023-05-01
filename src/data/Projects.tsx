@@ -168,7 +168,14 @@ const Excel2PO: Types['Project'] = {
   ],
 };
 
-// LATER: https://github.com/alexkuc/wordpress-components
+const WordPressComponents: Types['Project'] = {
+  name: 'WordPress Components',
+  summary: 'Various re-usable custom WordPress components',
+  links: [
+    Link.GitHub({ repo: 'wordpress-components' }),
+    Link.Packagist({ pkg: 'symfony/templating', name: 'Symfony Templating' }),
+  ],
+};
 
 // LATER: https://github.com/alexkuc/wordpress-ci
 
@@ -191,6 +198,7 @@ const Projects = {
   Export1Password,
   SocietyMeetingPlanner,
   Excel2PO,
+  WordPressComponents,
 };
 
 export { Projects };

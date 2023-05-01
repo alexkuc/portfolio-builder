@@ -58,6 +58,7 @@ const data: Types['Portfolio'] = {
     Projects.Export1Password,
     Projects.SocietyMeetingPlanner,
     Projects.Excel2PO,
+    Projects.WordPressComponents,
   ],
 };
 
