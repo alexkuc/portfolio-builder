@@ -10,7 +10,7 @@ import { Training } from './training/Training';
 const data: Types['Portfolio'] = {
   info: {
     name: 'Alexander Kucheryuk',
-    address: 'Edinburgh, Scotland, United Kingdom, EH4',
+    address: 'Edinburgh EH4, Scotland, United Kingdom',
     // https://github.com/colinhacks/zod/issues/2025#issuecomment-1445451748
     intro:
       "I'm a full-stack WordPress developer. Despite the fact that my university degree is in management, technology has always been my passion. That's because I knew I would work in the IT field. My professional journey began as a WordPress developer. I'm capable of doing everything from installing pre-made themes to creating tailor-made solutions. Additionally, I've managed network systems and worked on IT projects. My short-term objective is to become a front-end React developer. I've created a lot of TypeScript-based React widgets over the past two years. My ultimate goal is to hold a top management position, such as CTO.",
