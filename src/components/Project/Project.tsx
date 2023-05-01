@@ -1,4 +1,6 @@
+import React from 'react';
 import { v4 } from 'uuid';
+import { Badge } from '../Badge/Badge';
 import { Card } from '../Card/Card';
 import { Link } from '../Link/Link';
 import { Paragraph } from '../Paragraph/Paragraph';
@@ -43,13 +45,7 @@ const Project = ({ showBorder = true, ...props }: Props) => {
       {links && links.length > 0 && (
         <>
           <Separator type="dashed" />
-          <div className="project__links">
-            {links.map((l) => (
-              <Link key={v4()} href={l.href} type="button">
-                {l.name}
-              </Link>
-            ))}
-          </div>
+          <div className="project__links">{ProjectLinks(links)}</div>
         </>
       )}
     </>
@@ -76,6 +72,29 @@ const Point = ({ children }: { children: React.ReactNode }) => {
       </span>
     </li>
   );
+};
+
+const ProjectLinks = (
+  links: Exclude<Types['Project']['links'], undefined>
+): React.ReactNode => {
+  return links.map((unknown) => {
+    const isLink = Schemas.Link.safeParse(unknown);
+    if (isLink.success) {
+      const { name, href } = isLink.data;
+      return (
+        <Link key={v4()} href={href} type="button">
+          {name}
+        </Link>
+      );
+    }
+    const isBadge = Schemas.Badge.safeParse(unknown);
+    if (isBadge.success) {
+      const { name } = isBadge.data;
+      return <Badge key={v4()}>{name}</Badge>;
+    }
+    // default fail-safe
+    return <React.Fragment key={v4()}></React.Fragment>;
+  });
 };
 
 export { Project };
