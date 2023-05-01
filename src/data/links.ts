@@ -50,6 +50,8 @@ const Packagist = ({
   return make(name, `https://packagist.org/packages/${pkg}`);
 };
 
+const Bash = make('Bash', 'https://www.gnu.org/software/bash/');
+
 const Link = {
   make,
   React,
@@ -59,6 +61,7 @@ const Link = {
   Packagist,
   GitHub,
   GHPages,
+  Bash,
 };
 
 export { Link };
