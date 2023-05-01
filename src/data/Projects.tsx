@@ -203,6 +203,18 @@ const LastPass: Types['Project'] = {
   ],
 };
 
+const OmniFocusProjects: Types['Project'] = {
+  name: 'OmniFocus Projects Script',
+  summary: 'Export a list of projects using OmniFocus and OmniOutliner',
+  links: [
+    Link.GitHub({ repo: 'omnifocus-projects-script' }),
+    Link.make(
+      'Featured',
+      'https://inside.omnifocus.com/collected/GTD-specific-AppleScripts-from-Alexander'
+    ),
+  ],
+};
+
 const OmniFocusDeadlines: Types['Project'] = {
   name: 'OmniFocus Deadlines Script',
   summary:
@@ -215,8 +227,6 @@ const OmniFocusDeadlines: Types['Project'] = {
     ),
   ],
 };
-
-// LATER: https://github.com/alexkuc/omnifocus-projects-script
 
 // LATER: https://github.com/alexkuc/omnifocus-defer-script
 
@@ -234,6 +244,7 @@ const Projects = {
   WordPressComponents,
   WordPressCI,
   LastPass,
+  OmniFocusProjects,
   OmniFocusDeadlines,
 };
 
