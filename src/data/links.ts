@@ -58,9 +58,9 @@ const Link = {
   Bootstrap,
   TypeScript,
   npm,
-  Packagist,
   GitHub,
   GHPages,
+  Packagist,
   Bash,
 };
 
