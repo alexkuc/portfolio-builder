@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import React, { useEffect } from 'react';
 import { v4 } from 'uuid';
+import { Card } from '../Card/Card';
 import { Course } from '../Course/Course';
 import { Job } from '../Job/Job';
 import { Link } from '../Link/Link';
@@ -59,12 +60,13 @@ const Portfolio = (props: Types['Portfolio']) => {
             ))}
         </div>
         {coverLetter && (
-          <div className="portfolio__cover-letter">
-            <H2>Cover Letter</H2>
-            {coverLetter.map((p) => (
-              <Paragraph key={v4()}>{p}</Paragraph>
-            ))}
-          </div>
+          <Card header={<H2>Cover Letter</H2>}>
+            <div className="portfolio__cover-letter">
+              {coverLetter.map((p) => (
+                <Paragraph key={v4()}>{p}</Paragraph>
+              ))}
+            </div>
+          </Card>
         )}
         <div className="portfolio__content">
           {jobs.length > 0 && (

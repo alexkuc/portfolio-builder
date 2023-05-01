@@ -50,6 +50,10 @@ body {
   margin-block-end: 2rem;
 }
 
+.portfolio__cover-letter > *:last-child {
+  padding-block-end: 2.5rem;
+}
+
 .portfolio__content {
   @include tablet {
     flex-grow: 1;
@@ -64,6 +68,7 @@ body {
 }
 
 .portfolio__header--work {
+  margin-block-start: 0;
 }
 
 .portfolio__cards {
