@@ -112,7 +112,20 @@ const chartJsPlugin: Types['Project'] = {
   ],
 };
 
-// LATER: https://github.com/alexkuc/lighthouse-tool
+const lighthouseTool: Types['Project'] = {
+  name: 'Lighthouse Tool',
+  summary: 'Simple Node tool to automate the creation of Lighthouse reports',
+  links: [
+    {
+      name: 'source',
+      href: 'https://github.com/alexkuc/lighthouse-tool',
+    },
+    {
+      name: 'TypeScript',
+      href: 'https://www.typescriptlang.org',
+    },
+  ],
+};
 
 // LATER: https://github.com/alexkuc/1password-export-js
 
@@ -139,6 +152,7 @@ const Projects = {
   useFilters,
   meetingPlanner,
   chartJsPlugin,
+  lighthouseTool,
 };
 
 export { Projects };

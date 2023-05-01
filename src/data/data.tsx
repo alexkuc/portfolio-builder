@@ -54,6 +54,7 @@ const data: Types['Portfolio'] = {
     Projects.useFilters,
     Projects.meetingPlanner,
     Projects.chartJsPlugin,
+    Projects.lighthouseTool,
   ],
 };
 
