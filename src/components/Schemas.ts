@@ -13,11 +13,15 @@ const Link = z.object({
   href: z.string().url(),
 });
 
+const Badge = Link.omit({
+  href: true,
+});
+
 const Project = z.object({
   name: z.string(),
   summary: StringOrFragment.or(StringOrFragment.array()).optional(),
   points: StringOrFragment.array().optional(),
-  links: Link.array().optional(),
+  links: z.union([Link, Badge]).array().optional(),
 });
 
 const Job = z.object({
@@ -66,6 +70,7 @@ const Portfolio = z.object({
 export const Schemas = {
   Info,
   Link,
+  Badge,
   Project,
   Job,
   Study,
@@ -76,6 +81,7 @@ export const Schemas = {
 export type Types = {
   Info: z.infer<typeof Info>;
   Link: z.infer<typeof Link>;
+  Badge: z.infer<typeof Badge>;
   Project: z.infer<typeof Project>;
   Job: z.infer<typeof Job>;
   Study: z.infer<typeof Study>;
