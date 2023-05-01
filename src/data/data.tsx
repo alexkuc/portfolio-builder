@@ -61,6 +61,7 @@ const data: Types['Portfolio'] = {
     Projects.WordPressComponents,
     Projects.WordPressCI,
     Projects.LastPass,
+    Projects.OmniFocusDeadlines,
   ],
 };
 
