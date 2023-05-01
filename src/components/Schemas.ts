@@ -52,6 +52,7 @@ const Info = z.object({
   linkedin: z.string().url().optional(),
   email: z.string().email().optional(),
   phone: z.string().optional(),
+  coverLetter: z.string().array().optional(),
 });
 
 const Portfolio = z.object({
