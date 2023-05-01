@@ -1,4 +1,5 @@
 import { Types } from '../components/Schemas';
+import { Link } from './links';
 
 const PortfolioBuilder: Types['Project'] = {
   name: 'Portfolio builder',
@@ -143,7 +144,17 @@ const Export1Password: Types['Project'] = {
   ],
 };
 
-// LATER: https://github.com/alexkuc/society-meeting-planner
+const SocietyMeetingPlanner: Types['Project'] = {
+  name: 'Society Meeting Planner',
+  summary:
+    'A web application built with React that helps users find common free time. This is my very first React project. It was created when I was a member of the Stirling Public Speaking Society to assist the group in scheduling meetings.',
+  links: [
+    Link.GHPages({ repo: 'society-meeting-planner' }),
+    Link.GitHub({ repo: 'society-meeting-planner' }),
+    Link.React,
+    Link.Bootstrap,
+  ],
+};
 
 // LATER: https://github.com/alexkuc/excel2po
 
@@ -168,6 +179,7 @@ const Projects = {
   ChartJsPlugin,
   LighthouseTool,
   Export1Password,
+  SocietyMeetingPlanner,
 };
 
 export { Projects };
