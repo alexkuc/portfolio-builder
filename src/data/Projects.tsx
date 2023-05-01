@@ -127,7 +127,21 @@ const lighthouseTool: Types['Project'] = {
   ],
 };
 
-// LATER: https://github.com/alexkuc/1password-export-js
+const export1Password: Types['Project'] = {
+  name: '1Password Export',
+  summary:
+    'Automate the export of data from 1Password for offline backup needs',
+  links: [
+    {
+      name: 'source',
+      href: 'https://github.com/alexkuc/1password-export-js',
+    },
+    {
+      name: '1Password',
+      href: 'https://1password.com/downloads/command-line/',
+    },
+  ],
+};
 
 // LATER: https://github.com/alexkuc/society-meeting-planner
 
@@ -153,6 +167,7 @@ const Projects = {
   meetingPlanner,
   chartJsPlugin,
   lighthouseTool,
+  export1Password,
 };
 
 export { Projects };
