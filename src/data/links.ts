@@ -16,7 +16,7 @@ const npm = ({ pkg, name = pkg }: { pkg: string; name?: string | undefined }) =>
 
 const GitHub = ({
   repo,
-  name = 'source',
+  name = 'Source',
   user = 'alexkuc',
 }: {
   repo: string;
@@ -26,7 +26,7 @@ const GitHub = ({
 
 const GHPages = ({
   repo,
-  name = 'demo',
+  name = 'Demo',
   user = 'alexkuc',
 }: {
   repo: string;
