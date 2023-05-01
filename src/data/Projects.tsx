@@ -177,7 +177,18 @@ const WordPressComponents: Types['Project'] = {
   ],
 };
 
-// LATER: https://github.com/alexkuc/wordpress-ci
+const WordPressCI: Types['Project'] = {
+  name: 'WordPress CI',
+  summary:
+    'Ready-to-deploy WordPress CI template with  Docker, SemaphoreCI, and WPBrowser',
+  links: [
+    Link.GitHub({ repo: 'wordpress-ci' }),
+    Link.make('Docker', 'https://www.docker.com'),
+    Link.make('SemaphoreCI', 'https://semaphoreci.com'),
+    Link.Packagist({ pkg: 'codeception/codeception' }),
+    Link.Packagist({ pkg: 'lucatume/wp-browser', name: 'WP-Browser' }),
+  ],
+};
 
 // LATER: https://github.com/alexkuc/lpass-scripts
 
@@ -199,6 +210,7 @@ const Projects = {
   SocietyMeetingPlanner,
   Excel2PO,
   WordPressComponents,
+  WordPressCI,
 };
 
 export { Projects };
