@@ -229,6 +229,10 @@ const OmniFocusDeadlines: Types['Project'] = {
       'Featured',
       'https://inside.omnifocus.com/collected/GTD-specific-AppleScripts-from-Alexander'
     ),
+    Link.make(
+      'Featured',
+      'https://inside.omnifocus.com/collected#:~:text=Export%20OmniFocus%20Projects%20to%20OmniOutliner%20for%20Review'
+    ),
   ],
 };
 
