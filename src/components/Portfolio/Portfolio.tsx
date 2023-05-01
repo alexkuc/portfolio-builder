@@ -1,7 +1,8 @@
 import classNames from 'classnames';
 import React, { useEffect } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { v4 } from 'uuid';
-import { Card } from '../Card/Card';
+import { Card, Props as CardProps } from '../Card/Card';
 import { Course } from '../Course/Course';
 import { Job } from '../Job/Job';
 import { Link } from '../Link/Link';
@@ -25,6 +26,11 @@ const Portfolio = (props: Types['Portfolio']) => {
   useEffect(() => {
     document.title = 'Portfolio of ' + name;
   }, []);
+
+  const isTablet = useMediaQuery({
+    // https://stackoverflow.com/a/51993054
+    query: '(min-width: 48rem)', // 768px
+  });
 
   return (
     <div className="portfolio">
@@ -52,11 +58,13 @@ const Portfolio = (props: Types['Portfolio']) => {
       <div className="portfolio__container">
         <div className="portfolio__about">
           {about &&
-            Object.entries(about).map(([h2, paragraph]) => (
-              <React.Fragment key={h2}>
-                <H2>{h2}</H2>
-                <Paragraph>{paragraph}</Paragraph>
-              </React.Fragment>
+            Object.entries(about).map(([header, paragraph]) => (
+              <ConditionalCard
+                key={header}
+                header={header}
+                paragraph={paragraph}
+                mediaQuery={isTablet}
+              />
             ))}
         </div>
         {coverLetter && (
@@ -135,6 +143,38 @@ const H2 = ({ children, className, ...props }: H2) => {
 
 const Cards = ({ children }: { children: React.ReactNode[] }) => {
   return <h2 className="portfolio__cards">{children}</h2>;
+};
+
+type ConditionalCard = {
+  header: React.ReactNode;
+  paragraph: React.ReactNode;
+  mediaQuery: boolean;
+} & Omit<CardProps, 'children'>;
+
+const ConditionalCard = ({
+  header,
+  paragraph,
+  mediaQuery,
+  ...cardProps
+}: ConditionalCard) => {
+  const h2 = <H2>{header}</H2>;
+  const p = <Paragraph>{paragraph}</Paragraph>;
+  if (mediaQuery) {
+    return (
+      <>
+        {h2}
+        {p}
+      </>
+    );
+  }
+  if (!mediaQuery) {
+    return (
+      <Card {...cardProps} header={h2}>
+        {p}
+      </Card>
+    );
+  }
+  return <></>; // fail-safe catch
 };
 
 export { Portfolio };

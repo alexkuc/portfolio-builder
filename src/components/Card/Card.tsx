@@ -4,7 +4,7 @@ import './card.scss';
 
 type Status = 'open' | 'closed';
 
-type Props = {
+type Card = {
   /** initial status */
   iStatus?: Status | undefined;
   header?: React.ReactNode;
@@ -12,7 +12,7 @@ type Props = {
   children: React.ReactNode | React.ReactNode[];
 };
 
-const Card = ({ iStatus, header, showBorder = false, children }: Props) => {
+const Card = ({ iStatus, header, showBorder = false, children }: Card) => {
   const [status, setStatus] = useState<Status>(iStatus ?? 'closed');
 
   const toggle = () => {
@@ -46,4 +46,4 @@ const Card = ({ iStatus, header, showBorder = false, children }: Props) => {
   );
 };
 
-export { Card };
+export { Card, Card as Props };
