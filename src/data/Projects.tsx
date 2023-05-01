@@ -1,6 +1,6 @@
 import { Types } from '../components/Schemas';
 
-const portfolioBuilder: Types['Project'] = {
+const PortfolioBuilder: Types['Project'] = {
   name: 'Portfolio builder',
   summary:
     'This portfolio is a builder rather than a collection of HTML elements that have been hard-coded. Data from a JSON file is fed into general-purpose, reusable components. As I would only need to update the JSON data file, I am able to easily keep my portfolio up to date.',
@@ -56,7 +56,7 @@ const useFilters: Types['Project'] = {
   ],
 };
 
-const meetingPlanner: Types['Project'] = {
+const MeetingPlanner: Types['Project'] = {
   name: 'Meeting planner (private)',
   summary:
     "Users can find overlapping free time by using the Meeting Planner, a React-based SPA that supports multiple time zones. It makes use of an intuitive table-based user interface to make the process more user-friendly. This is currently in development; therefore, I haven't made it open to the general public yet.",
@@ -92,7 +92,7 @@ const meetingPlanner: Types['Project'] = {
   ],
 };
 
-const chartJsPlugin: Types['Project'] = {
+const ChartJsPlugin: Types['Project'] = {
   name: 'ChartJS donut chart plugin',
   summary:
     'I discovered the chart.js plugin that offers donut charts while working on the Dashboard project. I had to create my own port of the plugin because, unfortunately, it was incompatible with v2.',
@@ -112,7 +112,7 @@ const chartJsPlugin: Types['Project'] = {
   ],
 };
 
-const lighthouseTool: Types['Project'] = {
+const LighthouseTool: Types['Project'] = {
   name: 'Lighthouse Tool',
   summary: 'Simple Node tool to automate the creation of Lighthouse reports',
   links: [
@@ -127,7 +127,7 @@ const lighthouseTool: Types['Project'] = {
   ],
 };
 
-const export1Password: Types['Project'] = {
+const Export1Password: Types['Project'] = {
   name: '1Password Export',
   summary:
     'Automate the export of data from 1Password for offline backup needs',
@@ -162,12 +162,12 @@ const export1Password: Types['Project'] = {
 // LATER: https://github.com/alexkuc/remote-dev-server-scripts
 
 const Projects = {
-  portfolioBuilder,
+  PortfolioBuilder,
   useFilters,
-  meetingPlanner,
-  chartJsPlugin,
-  lighthouseTool,
-  export1Password,
+  MeetingPlanner,
+  ChartJsPlugin,
+  LighthouseTool,
+  Export1Password,
 };
 
 export { Projects };

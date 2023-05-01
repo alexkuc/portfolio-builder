@@ -50,12 +50,12 @@ const data: Types['Portfolio'] = {
     Training.CBTNuggets.ITILFoundationV3,
   ],
   personal: [
-    Projects.portfolioBuilder,
+    Projects.PortfolioBuilder,
     Projects.useFilters,
-    Projects.meetingPlanner,
-    Projects.chartJsPlugin,
-    Projects.lighthouseTool,
-    Projects.export1Password,
+    Projects.MeetingPlanner,
+    Projects.ChartJsPlugin,
+    Projects.LighthouseTool,
+    Projects.Export1Password,
   ],
 };
 
