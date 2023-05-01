@@ -40,7 +40,15 @@ const Packagist = ({
 }: {
   pkg: string;
   name?: string | undefined;
-}) => make(name, `https://packagist.org/packages/${pkg}`);
+}) => {
+  if (name === pkg) {
+    const split = pkg.split('/');
+    if (split[1]) {
+      name = split[1][0].toUpperCase() + split[1].slice(1);
+    }
+  }
+  return make(name, `https://packagist.org/packages/${pkg}`);
+};
 
 const Link = {
   make,
