@@ -6,7 +6,7 @@ const UniversityOfStirling: Types['Study'] = {
   end: date('06.19'),
   institution: 'University of Stirling',
   qualiftication:
-    'Bachelor of Arts with Honors Business Studies and Human Resource Management',
+    'Bachelor of Arts with Honors Business Studies and Human Resource Management (2:1 class)',
 };
 
 const Education = {
