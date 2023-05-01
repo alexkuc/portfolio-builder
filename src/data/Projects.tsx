@@ -156,7 +156,17 @@ const SocietyMeetingPlanner: Types['Project'] = {
   ],
 };
 
-// LATER: https://github.com/alexkuc/excel2po
+const Excel2PO: Types['Project'] = {
+  name: 'Excel2PO',
+  summary: 'Create .po & .mo files from Excel spreadsheet',
+  links: [
+    Link.GitHub({ repo: 'excel2po' }),
+    Link.Packagist({ pkg: 'laravel/framework' }),
+    Link.Packagist({ pkg: 'gettext/gettext' }),
+    Link.Packagist({ pkg: 'guzzlehttp/guzzle' }),
+    Link.Packagist({ pkg: 'phpoffice/phpspreadsheet', name: 'PHPSpreadsheet' }),
+  ],
+};
 
 // LATER: https://github.com/alexkuc/wordpress-components
 
@@ -180,6 +190,7 @@ const Projects = {
   LighthouseTool,
   Export1Password,
   SocietyMeetingPlanner,
+  Excel2PO,
 };
 
 export { Projects };
