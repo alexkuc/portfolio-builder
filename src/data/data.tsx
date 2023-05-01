@@ -60,6 +60,7 @@ const data: Types['Portfolio'] = {
     Projects.Excel2PO,
     Projects.WordPressComponents,
     Projects.WordPressCI,
+    Projects.LastPass,
   ],
 };
 

@@ -190,7 +190,18 @@ const WordPressCI: Types['Project'] = {
   ],
 };
 
-// LATER: https://github.com/alexkuc/lpass-scripts
+const LastPass: Types['Project'] = {
+  name: 'LastPass Scripts',
+  summary: 'Bash scripts for LastPass CLI',
+  links: [
+    Link.GitHub({ repo: 'lpass-scripts' }),
+    Link.Bash,
+    Link.make(
+      'LastPass',
+      'https://support.logmeininc.com/lastpass/help/use-the-lastpass-command-line-application-lp040011'
+    ),
+  ],
+};
 
 // LATER: https://github.com/alexkuc/omnifocus-deadlines-script
 
@@ -211,6 +222,7 @@ const Projects = {
   Excel2PO,
   WordPressComponents,
   WordPressCI,
+  LastPass,
 };
 
 export { Projects };
