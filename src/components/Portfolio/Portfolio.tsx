@@ -14,7 +14,7 @@ const Portfolio = (props: Types['Portfolio']) => {
   const portfolio = Schemas.Portfolio.parse(props);
 
   const {
-    info: { name, about, address, linkedin, email, phone },
+    info: { name, about, address, linkedin, email, phone, coverLetter },
     jobs,
     education,
     training,
@@ -58,6 +58,14 @@ const Portfolio = (props: Types['Portfolio']) => {
               </React.Fragment>
             ))}
         </div>
+        {coverLetter && (
+          <div className="portfolio__cover-letter">
+            <H2>Cover Letter</H2>
+            {coverLetter.map((p) => (
+              <Paragraph key={v4()}>{p}</Paragraph>
+            ))}
+          </div>
+        )}
         <div className="portfolio__content">
           {jobs.length > 0 && (
             <>

@@ -31,7 +31,6 @@ body {
 }
 
 .portfolio__about {
-  margin-block-end: 2.5rem;
 }
 
 .portfolio__contacts {
@@ -42,6 +41,13 @@ body {
   @include tablet {
     gap: 0.75rem;
   }
+}
+
+.portfolio__cover-letter {
+}
+
+.portfolio__cover-letter > *:not(:last-child) {
+  margin-block-end: 2rem;
 }
 
 .portfolio__content {
@@ -58,9 +64,6 @@ body {
 }
 
 .portfolio__header--work {
-  @include tablet {
-    margin-block-start: 0;
-  }
 }
 
 .portfolio__cards {
