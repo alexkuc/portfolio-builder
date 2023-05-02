@@ -30,7 +30,22 @@ body {
   margin-block-end: 1rem;
 }
 
-.portfolio__about {
+.portfolio__skills {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.portfolio__skills > *:not(:last-child) {
+  margin-block-end: 2rem;
+
+  @include tablet {
+    margin-block-end: 0.25rem;
+  }
+}
+
+.portfolio__skill {
+  font-size: 1.6rem;
+  line-height: 2rem;
 }
 
 .portfolio__contacts {

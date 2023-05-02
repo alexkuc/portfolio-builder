@@ -14,12 +14,19 @@ const data: Types['Portfolio'] = {
     // https://github.com/colinhacks/zod/issues/2025#issuecomment-1445451748
     intro:
       "I'm a full-stack WordPress developer. Despite the fact that my university degree is in management, technology has always been my passion. That's because I knew I would work in the IT field. My professional journey began as a WordPress developer. I'm capable of doing everything from installing pre-made themes to creating tailor-made solutions. Additionally, I've managed network systems and worked on IT projects. My short-term objective is to become a front-end React developer. I've created a lot of TypeScript-based React widgets over the past two years. My ultimate goal is to hold a top management position, such as CTO.",
-    about: {
-      'Personal Profile':
-        'As a full-stack WordPress developer with strong project management skills, I am dedicated to delivering high-quality projects that exceed client expectations. With several years of experience in the industry, I have worked with many different companies and have a deep understanding of what it takes to drive success in this field. I am always staying up-to-date with the latest WordPress technologies and am constantly refining my development skills to stay ahead of the curve. Additionally, my project management skills allow me to effectively organize and prioritize tasks, communicate with team members, and ensure successful project completion on time and within budget. With a commitment to excellence and a passion for creating impactful solutions, I am confident that I can make a valuable contribution to any team.',
-      'Skills and Core Competence':
-        "As a full-stack WordPress developer, I have a lot of experience and am well-versed in a variety of technological fields, including front-end and back-end web development. I've worked on a variety of projects, ranging from simple jQuery scripts to wholly unique React and TypeScript solutions. I have expertise with LEMP and Active Directory infrastructures in addition to web development, so I can handle network and server-related difficulties.",
-    },
+    about:
+      'As a full-stack WordPress developer with strong project management skills, I am dedicated to delivering high-quality projects that exceed client expectations. With several years of experience in the industry, I have worked with many different companies and have a deep understanding of what it takes to drive success in this field. I am always staying up-to-date with the latest WordPress technologies and am constantly refining my development skills to stay ahead of the curve. Additionally, my project management skills allow me to effectively organize and prioritize tasks, communicate with team members, and ensure successful project completion on time and within budget. With a commitment to excellence and a passion for creating impactful solutions, I am confident that I can make a valuable contribution to any team.',
+    skills: [
+      'Expertise in WordPress development, including custom theme and plugin development, site customization, and code debugging',
+      'Proficiency in frontend development technologies, including React and TypeScript',
+      'Proficiency in the backend language PHP, knowledge of popular libraries, and programming patterns',
+      'Proficient in project management methodologies, including Agile development, such as Scrum and Kanban',
+      'Ability to manage and lead cross-functional development teams, including designers, developers, and quality assurance professionals',
+      'Excellent communication skills, with the ability to clearly articulate complex technical concepts to non-technical stakeholders',
+      'Strong problem-solving and analytical skills, with a proven track record of delivering high-quality solutions on time and within budget',
+      'Demonstrated ability to work collaboratively with internal and external stakeholders, including clients, vendors, and partners',
+      'Passionate about staying up-to-date with the latest trends and technologies in the web development industry',
+    ],
     linkedin: 'https://linkedin.com/in/alexkuc',
     phone: '+441313990232',
     email: 'alexander.kucheryuk@icloud.com',

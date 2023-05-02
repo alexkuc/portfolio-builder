@@ -16,7 +16,7 @@ const Portfolio = (props: Types['Portfolio']) => {
   const portfolio = Schemas.Portfolio.parse(props);
 
   const {
-    info: { name, about, address, linkedin, email, phone, coverLetter },
+    info: { name, about, skills, address, linkedin, email, phone, coverLetter },
     jobs,
     education,
     training,
@@ -56,17 +56,25 @@ const Portfolio = (props: Types['Portfolio']) => {
         </div>
       )}
       <div className="portfolio__container">
-        <div className="portfolio__about">
-          {about &&
-            Object.entries(about).map(([header, paragraph]) => (
-              <ConditionalCard
-                key={header}
-                header={header}
-                paragraph={paragraph}
-                mediaQuery={isTablet}
-              />
-            ))}
-        </div>
+        {about && (
+          <ConditionalCard header={'Personal Profile'} mediaQuery={isTablet}>
+            <Paragraph>{about}</Paragraph>
+          </ConditionalCard>
+        )}
+        {skills && (
+          <ConditionalCard
+            header={'Skills and Core Competence'}
+            mediaQuery={isTablet}
+          >
+            <ul className="portfolio__skills">
+              {skills.map((skill) => (
+                <li key={skill} className="portfolio__skill">
+                  {skill}
+                </li>
+              ))}
+            </ul>
+          </ConditionalCard>
+        )}
         {coverLetter && (
           <Card header={<H2>Cover Letter</H2>}>
             <div className="portfolio__cover-letter">
@@ -147,30 +155,29 @@ const Cards = ({ children }: { children: React.ReactNode[] }) => {
 
 type ConditionalCard = {
   header: React.ReactNode;
-  paragraph: React.ReactNode;
+  children: React.ReactNode;
   mediaQuery: boolean;
 } & Omit<CardProps, 'children'>;
 
 const ConditionalCard = ({
   header,
-  paragraph,
+  children,
   mediaQuery,
   ...cardProps
 }: ConditionalCard) => {
   const h2 = <H2>{header}</H2>;
-  const p = <Paragraph>{paragraph}</Paragraph>;
   if (mediaQuery) {
     return (
       <>
         {h2}
-        {p}
+        {children}
       </>
     );
   }
   if (!mediaQuery) {
     return (
       <Card {...cardProps} header={h2}>
-        {p}
+        {children}
       </Card>
     );
   }
